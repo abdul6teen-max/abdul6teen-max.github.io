@@ -9,7 +9,1462 @@
 <html lang="en"><!DOCTYPE html>
 <html lang="en">
 <head><!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
-<html lang="en"><!DOCTYPE html><!DOCTYPE html>
+<html lang="en"><!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="MNN Japanese"/>
+<title>みんなの日本語</title>
+<link rel="manifest" id="pwa-manifest"/>
+<link rel="apple-touch-icon" id="apple-icon"/>
+<meta name="theme-color" content="#ffffff"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<script>
+// Inline icon data
+const ICON_512 = "data:image/png;base64,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";
+const ICON_192 = "data:image/png;base64,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";
+
+// Build and inject manifest dynamically
+function injectManifest() {
+  const manifest = {
+    name: "日本語",
+    short_name: "日本語",
+    description: "Minna no Nihongo flashcard app",
+    start_url: "./",
+    display: "standalone",
+    background_color: "#ffffff",
+    theme_color: "#ffffff",
+    orientation: "portrait",
+    icons: [
+      { src: ICON_192, sizes: "192x192", type: "image/png", purpose: "any maskable" },
+      { src: ICON_512, sizes: "512x512", type: "image/png", purpose: "any maskable" }
+    ]
+  };
+  const blob = new Blob([JSON.stringify(manifest)], {type: "application/manifest+json"});
+  const url = URL.createObjectURL(blob);
+  document.getElementById("pwa-manifest").setAttribute("href", url);
+  document.getElementById("apple-icon").setAttribute("href", ICON_192);
+}
+document.addEventListener("DOMContentLoaded", injectManifest);
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<!-- Firebase -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCcXH5v8dhJA3YgUEik_od2Q9Ck34TYLsA",
+  authDomain: "mnn-japanese.firebaseapp.com",
+  projectId: "mnn-japanese",
+  storageBucket: "mnn-japanese.firebasestorage.app",
+  messagingSenderId: "4772966146",
+  appId: "1:4772966146:web:f37f3fe22e7b5e41c71c1b"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window._fbLoad = async (name) => {
+  try {
+    const snap = await getDoc(doc(db, "profiles", name));
+    return snap.exists() ? snap.data().state : null;
+  } catch(e) { console.error("Load error", e); return null; }
+};
+window._fbSave = async (name, data) => {
+  try {
+    await setDoc(doc(db, "profiles", name), { state: data });
+  } catch(e) { console.error("Save error", e); }
+};
+window._fbReady = true;
+window.dispatchEvent(new Event("fbready"));
+</script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#1a1a1a;--surface:#242424;--surface2:#2c2c2c;--surface3:#333;
+  --border:#383838;--border2:#444;
+  --text:#e8e6e3;--text2:#999;--text3:#555;
+  --accent:#4d9de0;--gold:#c8973a;
+  --again:#c0392b;--hard:#e67e22;--good:#27ae60;--easy:#2980b9;
+  --again-bg:rgba(192,57,43,0.13);--hard-bg:rgba(230,126,34,0.13);
+  --good-bg:rgba(39,174,96,0.13);--easy-bg:rgba(41,128,185,0.13);
+  --font-jp:'Noto Sans JP',sans-serif;--font-ui:'DM Sans',sans-serif;
+}
+body.light{
+  --bg:#f5f5f0;--surface:#ffffff;--surface2:#f0ede8;--surface3:#e8e5e0;
+  --border:#ddd;--border2:#ccc;
+  --text:#1a1a1a;--text2:#555;--text3:#999;
+  --again-bg:rgba(192,57,43,0.08);--hard-bg:rgba(230,126,34,0.08);
+  --good-bg:rgba(39,174,96,0.08);--easy-bg:rgba(41,128,185,0.08);
+}
+.theme-toggle{display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none;}
+.theme-toggle-track{width:36px;height:20px;border-radius:10px;position:relative;transition:background .2s;flex-shrink:0;}
+.theme-toggle-thumb{width:14px;height:14px;border-radius:7px;background:#fff;position:absolute;top:3px;transition:left .2s;}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--font-ui);}
+#app{min-height:100vh;display:flex;flex-direction:column;}
+::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+.btn{transition:all .13s ease;cursor:pointer;user-select:none;}
+.btn:hover{filter:brightness(1.12);}
+.btn:active{transform:scale(0.97);}
+.nav-tab{transition:all .15s;cursor:pointer;user-select:none;}
+.deck-row{transition:background .1s;cursor:pointer;}
+.deck-row:hover{background:var(--surface2)!important;}
+.rating-btn{transition:all .13s ease;cursor:pointer;}
+.rating-btn:hover{filter:brightness(1.15);transform:translateY(-1px);}
+.rating-btn:active{transform:translateY(0);}
+.lesson-chip{transition:all .12s;cursor:pointer;}
+.lesson-chip:hover{border-color:var(--accent)!important;}
+.lesson-chip.sel{background:rgba(77,157,224,0.18)!important;border-color:var(--accent)!important;color:#7ec8f4!important;}
+.card-wrap{perspective:1000px;}
+.card-inner{position:relative;width:100%;transform-style:preserve-3d;transition:transform .4s cubic-bezier(.4,0,.2,1);}
+.card-inner.flipped{transform:rotateX(180deg);}
+.card-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:12px;}
+.card-back-face{transform:rotateX(180deg);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .22s ease;}
+@keyframes pop{0%{transform:scale(.96)}60%{transform:scale(1.02)}100%{transform:scale(1)}}
+.pop{animation:pop .25s ease;}
+@keyframes slideIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.slide-in{animation:slideIn .3s ease;}
+input[type=range]{-webkit-appearance:none;width:100%;height:4px;border-radius:2px;background:var(--border2);outline:none;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--accent);cursor:pointer;}
+input[type=date]{color-scheme:dark;}
+.toggle-track{width:44px;height:24px;border-radius:12px;position:relative;transition:background .2s;cursor:pointer;flex-shrink:0;}
+.toggle-thumb{width:18px;height:18px;border-radius:9px;background:#fff;position:absolute;top:3px;transition:left .2s;}
+</style>
+</head>
+<body>
+<div id="app"><div style="display:flex;align-items:center;justify-content:center;height:100vh;color:var(--text2);font-family:var(--font-ui)">Connecting...</div></div>
+
+<script>
+// ── Wait for Firebase ─────────────────────────────────────────────────────────
+function onFbReady(cb) {
+  if (window._fbReady) cb();
+  else window.addEventListener("fbready", cb, {once:true});
+}
+
+// ── RAW DATA ──────────────────────────────────────────────────────────────────
+const RAW = {"Lesson 01":[{"expression":"わたし","meaning":"I","reading":"わたし"},{"expression":"あなた","meaning":"You","reading":"あなた"},{"expression":"あの　ひと　（あの　かた）","meaning":"That person, he, she (あの　かた　is the polite equivalent of あの　ひと）","reading":"あの　ひと　（あの　かた）"},{"expression":"～さん","meaning":"Mr., Ms. (suffix added to a name for expressing politeness)","reading":"~さん"},{"expression":"～ちゃん","meaning":"(suffix often added to a child:s name instead of ~san)","reading":"~ちゃん"},{"expression":"～人","meaning":"(suffix meaning `a national of`)","reading":"~ 人[じん]"},{"expression":"先生","meaning":"teacher, instructor (not used when referring to one`s own job)","reading":"先生[せんせい]"},{"expression":"教師","meaning":"teacher, instructor","reading":"教師[きょうし]"},{"expression":"学生","meaning":"student","reading":"学生[がくせい]"},{"expression":"会社員","meaning":"company employee","reading":"会社[かいしゃ] 員[いん]"},{"expression":"社員","meaning":"employee of ~ company (used with a company`s name)","reading":"社員[しゃいん]"},{"expression":"銀行員","meaning":"bank employee","reading":"銀行[ぎんこう] 員[いん]"},{"expression":"医者","meaning":"[medical] doctor","reading":"医者[いしゃ]"},{"expression":"研究者","meaning":"researcher, scholar","reading":"研究[けんきゅう] 者[しゃ]"},{"expression":"大学","meaning":"university","reading":"大学[だいがく]"},{"expression":"病院","meaning":"hospital","reading":"病院[びょういん]"},{"expression":"だれ（どなた）","meaning":"who (どなた is the polite equivalent)","reading":"だれ（どなた）"},{"expression":"ーさい","meaning":"- years old","reading":"ーさい"},{"expression":"何歳　（おいくつ）","meaning":"how old (おいくつ is the polite equivalent)","reading":"何[なん] 歳[さい]　（おいくつ）"},{"expression":"はい","meaning":"yes","reading":"はい&nbsp;"},{"expression":"いいえ","meaning":"no","reading":"いいえ"},{"expression":"初めまして","meaning":"How do you do it? (lit. I am meeting you for the first time. Usually used as the first phrase when introducing oneself.)","reading":"初[はじ]めまして"},{"expression":"～から　来ました。","meaning":"I`m from ~ (country).","reading":"~から　 来[き]ました。"},{"expression":"［どうぞ］　よろしく　［お願いします］。","meaning":"Pleased to meet you. (lit. Please be nice to me. Usually used at the end of a self-introduction.)","reading":"［どうぞ］　よろしく　［お 願[ねが]いします］。"},{"expression":"失礼ですが","meaning":"Excuse me, but (used when asking someone for personal information such as their name or address)","reading":"失礼[しつれい]ですが"},{"expression":"お名前は？","meaning":"May I have your name?","reading":"お 名前[なまえ]は？"},{"expression":"こちらは　～さんです。","meaning":"This is Mr./Ms. ~.","reading":"こちらは　~さんです。"},{"expression":"アメリカ","meaning":"U.S.A.","reading":"アメリカ"},{"expression":"イギリス","meaning":"U.K.","reading":"イギリス"},{"expression":"インド","meaning":"India","reading":"インド"},{"expression":"インドネシア","meaning":"Indonesia","reading":"インドネシア"},{"expression":"韓国","meaning":"South Korea","reading":"韓国[かんこく]"},{"expression":"タイ","meaning":"Thailand","reading":"タイ"},{"expression":"中国","meaning":"China","reading":"中国[ちゅうごく]"},{"expression":"ドイツ","meaning":"Germany","reading":"ドイツ"},{"expression":"日本","meaning":"Japan","reading":"日本[にっほん]"},{"expression":"ブラジル","meaning":"Brazil","reading":"ブラジル"}],"Lesson 02":[{"expression":"これ","meaning":"this (thing here)","reading":"これ"},{"expression":"それ","meaning":"that (thing near the listener)","reading":"それ"},{"expression":"あれ","meaning":"that (thing over there)","reading":"あれ"},{"expression":"この　～","meaning":"this ~, this ~ here","reading":"この　~"},{"expression":"その　～","meaning":"that ~, that ~ near the listener","reading":"その　~"},{"expression":"あの　～","meaning":"that ~, that ~ over there","reading":"あの　~"},{"expression":"本","meaning":"book","reading":"本[ほん]"},{"expression":"辞書","meaning":"dictionary","reading":"辞書[じしょ]"},{"expression":"雑誌","meaning":"magazine","reading":"雑誌[ざっし]"},{"expression":"新聞","meaning":"newspaper","reading":"新聞[しんぶん]"},{"expression":"ノート","meaning":"notebook","reading":"ノート"},{"expression":"手帳","meaning":"personal organiser","reading":"手帳[てちょう]"},{"expression":"名称","meaning":"business card","reading":"名称[めいし]"},{"expression":"カード","meaning":"(credit) card","reading":"カード"},{"expression":"鉛筆","meaning":"pencil","reading":"鉛筆[えんぴつ]"},{"expression":"ボールペン","meaning":"ballpoint pen","reading":"ボールペン"},{"expression":"シャープペンシル","meaning":"mechanical pencil, propelling pencil","reading":"シャープペンシル"},{"expression":"かぎ","meaning":"key","reading":"かぎ"},{"expression":"時計","meaning":"watch, clock","reading":"時計[とけい]"},{"expression":"傘","meaning":"umbrella","reading":"傘[かさ]"},{"expression":"かばん","meaning":"bag, briefcase","reading":"かばん"},{"expression":"CD","meaning":"CD, compact disc","reading":"CD"},{"expression":"テルビ","meaning":"television","reading":"テルビ"},{"expression":"ラジオ","meaning":"radio","reading":"ラジオ"},{"expression":"カメラ","meaning":"camera","reading":"カメラ"},{"expression":"コンピューター","meaning":"computer","reading":"コンピューター"},{"expression":"車","meaning":"car, vehicle","reading":"車[くるま]"},{"expression":"机","meaning":"desk","reading":"机[つくえ]"},{"expression":"いす","meaning":"chair","reading":"いす"},{"expression":"チョコレート","meaning":"chocolate","reading":"チョコレート"},{"expression":"コーヒー","meaning":"coffee","reading":"コーヒー"},{"expression":"［お］土産","meaning":"souvenir, present","reading":"［お］ 土産[みやげ]"},{"expression":"英語","meaning":"the English language","reading":"英語[えいご]"},{"expression":"日本語","meaning":"the Japanese language","reading":"日本語[にほんご]"},{"expression":"何","meaning":"what","reading":"何[なん]"},{"expression":"そう","meaning":"so","reading":"そう"},{"expression":"あのう。。。","meaning":"Er...(used to show hesitation)","reading":"あのう。。。"},{"expression":"えっ","meaning":"Oh? What! (used when hearing something unexpected)","reading":"えっ"},{"expression":"どうぞ。","meaning":"Here you are. (used when offering someone something)","reading":"どうぞ。"},{"expression":"［どうも］　ありがとう　［ございます］。","meaning":"Thank you [very much].","reading":"［どうも］　ありがとう　［ございます］。"},{"expression":"そうですか。","meaning":"I see.","reading":"そうですか。"},{"expression":"違います。","meaning":"No, it isn`t./You are wrong.","reading":"違[ちが]います。"},{"expression":"あ","meaning":"Oh! (used when becoming aware of something)","reading":"あ"},{"expression":"これから　お世話に　なります。","meaning":"Thank you in advance for your kindness.","reading":"これから　お 世話[せわ]に　なります。"},{"expression":"こちらこそ　［どうぞ］　よろしく　［お願いします］","meaning":"Pleased to meet you, too. (response to ［どうぞ］　よろしく　［お願いします］）","reading":"こちらこそ　［どうぞ］　よろしく　［お 願[ねが]いします］"},{"expression":"部屋","meaning":"room","reading":"部屋[へや]"}],"Lesson 03":[{"expression":"ここ","meaning":"here, this place","reading":"ここ"},{"expression":"そこ","meaning":"there, that place near the listener","reading":"そこ"},{"expression":"あそこ","meaning":"that place over there","reading":"あそこ"},{"expression":"どこ","meaning":"where, what place","reading":"どこ"},{"expression":"こちら","meaning":"this way, this place (polite equivalent of ここ）","reading":"こちら"},{"expression":"そちら","meaning":"That way, that place near the listener (polite equivalent of そこ）","reading":"そちら"},{"expression":"あちら","meaning":"that way, that place over there (polite equivalent of あそこ）","reading":"あちら"},{"expression":"どちら","meaning":"which way, where (polite equivalent of どこ）","reading":"どちら"},{"expression":"教室","meaning":"classroom","reading":"教室[きょうしつ]"},{"expression":"食堂","meaning":"dining hall, canteen","reading":"食堂[しょくどう]"},{"expression":"事務所","meaning":"office","reading":"事務所[じむしょ]"},{"expression":"会議室","meaning":"conference room, meeting room","reading":"会議[かいぎ] 室[しつ]"},{"expression":"受付","meaning":"reception desk","reading":"受付[うけつけ]"},{"expression":"ロビー","meaning":"lobby","reading":"ロビー"},{"expression":"トイレ（お手洗い）","meaning":"toilet, rest room","reading":"トイレ（お 手洗[てあら]い）"},{"expression":"かいだん","meaning":"staircase","reading":"かいだん"},{"expression":"エレベーター","meaning":"lift, elevator","reading":"エレベーター"},{"expression":"エスカレーター","meaning":"escalator","reading":"エスカレーター"},{"expression":"自動販売機","meaning":"vending machine","reading":"自動[じどう] 販売[はんばい] 機[き]"},{"expression":"電話","meaning":"telephone handset, telephone call","reading":"電話[でんわ]"},{"expression":"［お］国","meaning":"country","reading":"［お］ 国[こく]"},{"expression":"会社","meaning":"company","reading":"会社[かいしゃ]"},{"expression":"うち","meaning":"house, home","reading":"うち"},{"expression":"靴","meaning":"shoes","reading":"靴[くつ]"},{"expression":"ネクタイ","meaning":"tie, necktie","reading":"ネクタイ"},{"expression":"ワイン","meaning":"wine","reading":"ワイン"},{"expression":"売り場","meaning":"department, counter (in a department store, etc.)","reading":"売り場[うりば]"},{"expression":"地下","meaning":"basement","reading":"地下[ちか]"},{"expression":"ーかい　（がい）","meaning":"-th floor","reading":"ーかい　（がい）"},{"expression":"なんがい","meaning":"what floor","reading":"なんがい"},{"expression":"ーえん","meaning":"- yen","reading":"ーえん"},{"expression":"いくら","meaning":"how much","reading":"いくら"},{"expression":"百","meaning":"hundred","reading":"百[ひゃく]"},{"expression":"千","meaning":"thousand","reading":"千[せん]"},{"expression":"万","meaning":"ten thousand","reading":"万[まん]"},{"expression":"すみません。","meaning":"Excuse me.","reading":"すみません。"},{"expression":"どうも。","meaning":"Thanks.","reading":"どうも。"},{"expression":"いらっしゃいませ。","meaning":"Welcome./May I help you? (a greeting to a customer or a guest entering a shop, etc.)","reading":"いらっしゃいませ。"},{"expression":"［～を］みせて　ください。","meaning":"Please show me [~].","reading":"［~を］みせて　ください。"},{"expression":"じゃ","meaning":"well, then, in that case.","reading":"じゃ"},{"expression":"［～を］ください。","meaning":"Give me [~], please.","reading":"［~を］ください。"},{"expression":"イタリア","meaning":"Italy","reading":"イタリア"},{"expression":"スイス","meaning":"Switzerland","reading":"スイス"},{"expression":"フランス","meaning":"France","reading":"フランス"},{"expression":"ジャカルタ","meaning":"Jakarta","reading":"ジャカルタ"},{"expression":"バンコク","meaning":"Bangkok","reading":"バンコク"},{"expression":"ベルリン","meaning":"Berlin","reading":"ベルリン"}],"Lesson 04":[{"expression":"起きます","meaning":"get up, wake up","reading":"起[お]きます"},{"expression":"寝ます","meaning":"sleep, go to bed","reading":"寝[ね]ます"},{"expression":"働きます","meaning":"To work","reading":"働[はたら]きます"},{"expression":"休みます","meaning":"To take a rest, take a holiday","reading":"休[やす]みます"},{"expression":"べんきょうします","meaning":"To study","reading":"べんきょうします"},{"expression":"終わります","meaning":"To finish","reading":"終[お]わります"},{"expression":"デパート","meaning":"department store","reading":"デパート"},{"expression":"銀行","meaning":"bank","reading":"銀行[ぎんこう]"},{"expression":"郵便局","meaning":"post office","reading":"郵便[ゆうびん] 局[きょく]"},{"expression":"図書館","meaning":"library","reading":"図書館[としょかん]"},{"expression":"美術館","meaning":"art museum, art gallery","reading":"美術館[びじゅつかん]"},{"expression":"今","meaning":"now","reading":"今[いま]"},{"expression":"ーじ","meaning":"- o`clock","reading":"ーじ"},{"expression":"（－分）（－ぷん）","meaning":"- minute","reading":"（ ー分[ふん]）（ーぷん）"},{"expression":"半","meaning":"half","reading":"半[はん]"},{"expression":"何時","meaning":"what time","reading":"何時[なんじ]"},{"expression":"何分","meaning":"what minute","reading":"何分[なんぷん]"},{"expression":"午前","meaning":"a.m., morning","reading":"午前[ごぜん]"},{"expression":"午後","meaning":"p.m., afternoon","reading":"午後[ごご]"},{"expression":"朝","meaning":"morning","reading":"朝[あさ]"},{"expression":"昼","meaning":"daytime, noon","reading":"昼[ひる]"},{"expression":"ばん　（よる）","meaning":"night, evening","reading":"ばん　（よる）"},{"expression":"おととい","meaning":"the day before yesterday","reading":"おととい"},{"expression":"きのう","meaning":"yesterday","reading":"きのう"},{"expression":"きょう","meaning":"today","reading":"きょう"},{"expression":"あした","meaning":"tomorrow","reading":"あした"},{"expression":"あさって","meaning":"the day after tomorrow","reading":"あさって"},{"expression":"けさ","meaning":"this morning","reading":"けさ"},{"expression":"今晩","meaning":"this evening, tonight","reading":"今晩[こんばん]"},{"expression":"やすみ","meaning":"A rest, a holiday, a day off","reading":"やすみ"},{"expression":"昼休み","meaning":"lunchtime (lit. noon/afternoon break)","reading":"昼休[ひるやす]み"},{"expression":"試験","meaning":"examination, test","reading":"試験[しけん]"},{"expression":"会議","meaning":"meeting, conference (～を　します：hold a meeting)","reading":"会議[かいぎ]"},{"expression":"映画","meaning":"film, movie","reading":"映画[えいが]"},{"expression":"毎朝","meaning":"every morning","reading":"毎朝[まいあさ]"},{"expression":"毎晩","meaning":"every night","reading":"毎晩[まいばん]"},{"expression":"毎日","meaning":"every day","reading":"毎日[まいにち]"},{"expression":"月曜日","meaning":"Monday","reading":"月曜日[げつようび]"},{"expression":"火曜日","meaning":"Tuesday","reading":"火曜日[かようび]"},{"expression":"水曜日","meaning":"Wednesday","reading":"水曜日[すいようび]"},{"expression":"木曜日","meaning":"Thursday","reading":"木曜日[もくようび]"},{"expression":"金曜日","meaning":"Friday","reading":"金曜日[きんようび]"},{"expression":"土曜日","meaning":"Saturday","reading":"土曜日[どようび]"},{"expression":"日曜日","meaning":"Sunday","reading":"日曜日[にちようび]"},{"expression":"何曜日","meaning":"what day of the week","reading":"何[なん] 曜日[ようび]"},{"expression":"～から","meaning":"from ~","reading":"〜から"},{"expression":"～まで","meaning":"up to ~, until ~","reading":"~まで"},{"expression":"～と～","meaning":"and (used to connect nouns)","reading":"~と~"},{"expression":"たいへんですね。","meaning":"That's tough isn't it? (used when expressing sympathy)","reading":"たいへんですね。"},{"expression":"ばんごう","meaning":"number","reading":"ばんごう"},{"expression":"なんばん","meaning":"what number","reading":"なんばん"},{"expression":"ニューヨーク","meaning":"New York","reading":"ニューヨーク"},{"expression":"ペキン　（北京）","meaning":"Beijing","reading":"ペキン　（ 北京[ぺきん]）"},{"expression":"ロサンゼルス","meaning":"Los Angeles","reading":"ロサンゼルス"},{"expression":"ロンドン","meaning":"London","reading":"ロンドン"},{"expression":"そちら","meaning":"your place","reading":"そちら"}],"Lesson 05":[{"expression":"行きます","meaning":"To go","reading":"行[い]きます"},{"expression":"来ます","meaning":"To come","reading":"来[き]ます"},{"expression":"帰ります","meaning":"To go home, return","reading":"帰[かえ]ります"},{"expression":"学校","meaning":"school","reading":"学校[がっこう]"},{"expression":"スーパー","meaning":"supermarket","reading":"スーパー"},{"expression":"駅","meaning":"station","reading":"駅[えき]"},{"expression":"飛行機","meaning":"airplane","reading":"飛行機[ひこうき]"},{"expression":"船","meaning":"ship","reading":"船[ふね]"},{"expression":"電車","meaning":"electric train","reading":"電車[でんしゃ]"},{"expression":"地下鉄","meaning":"underground, subway","reading":"地下鉄[ちかてつ]"},{"expression":"新幹線","meaning":"the Shinkansen, the bullet train","reading":"新幹線[しんかんせん]"},{"expression":"バス","meaning":"bus","reading":"バス"},{"expression":"タクシー","meaning":"taxi","reading":"タクシー"},{"expression":"自転車","meaning":"bicycle","reading":"自転車[じてんしゃ]"},{"expression":"歩いて","meaning":"on foot","reading":"歩[ある]いて"},{"expression":"人","meaning":"person, people","reading":"人[ひと]"},{"expression":"友達","meaning":"friend","reading":"友達[ともだち]"},{"expression":"彼","meaning":"he, boyfriend, lover","reading":"彼[かれ]"},{"expression":"彼女","meaning":"she, girlfriend, lover","reading":"彼女[かのじょ]"},{"expression":"家族","meaning":"family","reading":"家族[かぞく]"},{"expression":"一人で","meaning":"alone, by oneself","reading":"一 人[ひとり]で"},{"expression":"先週","meaning":"Last week","reading":"先週[せんしゅう]"},{"expression":"今週","meaning":"this week","reading":"今週[こんしゅう]"},{"expression":"来週","meaning":"next week","reading":"来週[らいしゅう]"},{"expression":"先月","meaning":"last month","reading":"先月[せんげつ]"},{"expression":"今月","meaning":"this month","reading":"今月[こんげつ]"},{"expression":"来月","meaning":"next month","reading":"来月[らいげつ]"},{"expression":"去年","meaning":"last year","reading":"去年[きょねん]"},{"expression":"ことし","meaning":"this year","reading":"ことし"},{"expression":"来年","meaning":"next year","reading":"来年[らいねん]"},{"expression":"ー寝","meaning":"-th year","reading":"ー 寝[ねん]"},{"expression":"何年","meaning":"what year","reading":"何[なん] 年[ねん]"},{"expression":"－月","meaning":"-th month of the year","reading":"月[がつ]"},{"expression":"何月","meaning":"what month","reading":"何[なん] 月[がつ]"},{"expression":"ついたち　（1日）","meaning":"first day of the month","reading":"ついたち　（ 1 日）"},{"expression":"二日","meaning":"The second, two days","reading":"二[ふつ]日[か]"},{"expression":"三日","meaning":"third, three days","reading":"三[みっ] 日[か]"},{"expression":"四日","meaning":"fourth, four days","reading":"四[よっ] 日[か]"},{"expression":"五日","meaning":"fifth, five days","reading":"五[いつ]日[か]"},{"expression":"六日","meaning":"six, six days","reading":"六[むい]日[か]"},{"expression":"七日","meaning":"seventh, seven days","reading":"七[なの]日[か]"},{"expression":"八日","meaning":"eigth, eight days","reading":"八[よう] 日[か]"},{"expression":"九日","meaning":"ninth, nine days","reading":"九[ここの]日[か]"},{"expression":"十日","meaning":"tenth, ten days","reading":"十[とう]日[か]"},{"expression":"十四日","meaning":"fourteenth, fourteen days","reading":"十[じゅう]四[よっ]日[か]"},{"expression":"廿日","meaning":"twentieth, twenty days","reading":"廿[はつ] 日[か]"},{"expression":"二十四日","meaning":"twenty-fourth, twenty-four days","reading":"二[に]十[じゅう]四[よっ]日[か]"},{"expression":"－日","meaning":"-th day of the month, - day(s)","reading":"日[にち]"},{"expression":"何日","meaning":"which day of the month, how many days","reading":"何[なん] 日[にち]"},{"expression":"いつ","meaning":"when","reading":"いつ"},{"expression":"誕生日","meaning":"birthday","reading":"誕生[たんじょう] 日[び]"},{"expression":"そうですね。","meaning":"Yes, it is.","reading":"そうですね。"},{"expression":"［どうも］ありがとう　ございました。","meaning":"Thank you very much for what you did.","reading":"［どうも］ありがとう　ございました。"},{"expression":"どう　いたしまして。","meaning":"You're welcome. / Don't mention it.","reading":"どう　いたしまして。"},{"expression":"ー番線","meaning":"platform -, -th platform","reading":"ー 番線[ばんせん]"},{"expression":"次の","meaning":"next","reading":"次[つぎ]の"},{"expression":"普通","meaning":"local (train)","reading":"普通[ふつう]"},{"expression":"急行","meaning":"rapid","reading":"急行[きゅうこう]"},{"expression":"特急","meaning":"express","reading":"特急[とっきゅう]"},{"expression":"大阪城","meaning":"Osaka Castle, a famous castle in Osaka","reading":"大阪城[おおさかじょう]"}],"Lesson 06":[{"expression":"食べます","meaning":"To eat","reading":"食[た]べます"},{"expression":"飲みます","meaning":"to drink","reading":"飲[の]みます"},{"expression":"吸います［たばこを～］","meaning":"To smoke [a cigarette]","reading":"吸[す]います［たばこを~］"},{"expression":"見ます","meaning":"To see, look at, watch","reading":"見[み]ます"},{"expression":"聞きます","meaning":"To hear, listen","reading":"聞[き]きます"},{"expression":"読みます","meaning":"To read","reading":"読[よ]みます"},{"expression":"書きます","meaning":"To write (かきます　can also mean to draw or paint, but in this case it is written with hirigana in this book)","reading":"書[か]きます"},{"expression":"買います","meaning":"To buy","reading":"買[か]います"},{"expression":"取ります　［写真を～］","meaning":"To take [a photograph]","reading":"取[と]ります　［ 写真[しゃしん]を~］"},{"expression":"します","meaning":"To do, play","reading":"します"},{"expression":"会います　［友達に〜］","meaning":"To meet [a friend]","reading":"会[あ]います　［ 友達[ともだち]に〜］"},{"expression":"ごはん","meaning":"a meal, cooked rice","reading":"ごはん"},{"expression":"朝ごはん","meaning":"breakfast","reading":"朝[あさ]ごはん"},{"expression":"昼ごはん","meaning":"lunch","reading":"昼[ひる]ごはん"},{"expression":"晩ごはん","meaning":"dinner, supper","reading":"晩[ばん]ごはん"},{"expression":"パン","meaning":"bread","reading":"パン"},{"expression":"卵","meaning":"egg","reading":"卵[たまご]"},{"expression":"肉","meaning":"meat","reading":"肉[にく]"},{"expression":"魚","meaning":"fish","reading":"魚[さかな]"},{"expression":"野菜","meaning":"vegetable","reading":"野菜[やさい]"},{"expression":"果物","meaning":"fruit","reading":"果物[くだもの]"},{"expression":"[お] 水","meaning":"water","reading":"[お] 水[みず]"},{"expression":"お茶","meaning":"tea, green tea","reading":"お 茶[ちゃ]"},{"expression":"紅茶","meaning":"black tea","reading":"紅茶[こうちゃ]"},{"expression":"牛乳（ミルク）","meaning":"milk","reading":"牛乳[ぎゅうにゅう]（ミルク）"},{"expression":"ジュース","meaning":"juice","reading":"ジュース"},{"expression":"ビール","meaning":"beer","reading":"ビール"},{"expression":"［お］酒","meaning":"alcohol, Japanese rice wine","reading":"［お］ 酒[さけ]"},{"expression":"たばこ","meaning":"tobacco, cigarette","reading":"たばこ"},{"expression":"手紙","meaning":"letter","reading":"手紙[てがみ]"},{"expression":"レポート","meaning":"report","reading":"レポート"},{"expression":"写真","meaning":"photograph","reading":"写真[しゃしん]"},{"expression":"ビデオ","meaning":"video [tape], video deck","reading":"ビデオ"},{"expression":"店","meaning":"shop, store","reading":"店[みせ]"},{"expression":"庭","meaning":"garden","reading":"庭[にわ]"},{"expression":"宿題","meaning":"homework (～を　します：do homework)","reading":"宿題[しゅくだい]"},{"expression":"テニス","meaning":"tennis (～を　します：play tennis)","reading":"テニス"},{"expression":"サッカー","meaning":"soccer, football (～を　します：play soccer)","reading":"サッカー"},{"expression":"［お］花見","meaning":"cherry-blossom viewing (～を　します：view the cherry blossoms)","reading":"［お］ 花見[はなみ]"},{"expression":"いっしょに","meaning":"together","reading":"いっしょに"},{"expression":"ちょっと","meaning":"a little while, a little bit","reading":"ちょっと"},{"expression":"いつも","meaning":"always, usually","reading":"いつも"},{"expression":"時々","meaning":"sometimes","reading":"時々[ときどき]"},{"expression":"それから","meaning":"after then, and then","reading":"それから"},{"expression":"いいですね。","meaning":"That's good.","reading":"いいですね。"},{"expression":"わかりました。","meaning":"I see, I understood.","reading":"わかりました。"},{"expression":"何ですか。","meaning":"Yes? (lit. What is it?)","reading":"何[なん]ですか。"},{"expression":"じゃ、また［あした］。","meaning":"See you [tomorrow].","reading":"じゃ、また［あした］。"},{"expression":"メキシコ","meaning":"Mexico","reading":"メキシコ"},{"expression":"何","meaning":"what","reading":"何[なに]"},{"expression":"ええ","meaning":"yes","reading":"ええ"}],"Lesson 07":[{"expression":"切ります","meaning":"To cut, slice","reading":"切[き]ります"},{"expression":"送ります","meaning":"To send","reading":"送[おく]ります"},{"expression":"あげます","meaning":"To give","reading":"あげます"},{"expression":"もらいます","meaning":"To receive","reading":"もらいます"},{"expression":"貸します","meaning":"To lend","reading":"貸[か]します"},{"expression":"借ります","meaning":"To borrow","reading":"借[か]ります"},{"expression":"教えます","meaning":"To teach","reading":"教[おし]えます"},{"expression":"習います","meaning":"To learn","reading":"習[なら]います"},{"expression":"かけます［電話を～］","meaning":"make [a phone call]","reading":"かけます［ 電話[でんわ]を~］"},{"expression":"手","meaning":"hand, arm","reading":"手[て]"},{"expression":"はし","meaning":"chopsticks","reading":"はし"},{"expression":"スプーン","meaning":"spoon","reading":"スプーン"},{"expression":"ナイフ","meaning":"knife","reading":"ナイフ"},{"expression":"フォーク","meaning":"fork","reading":"フォーク"},{"expression":"はさみ","meaning":"scissors","reading":"はさみ"},{"expression":"パソコン","meaning":"personal computer","reading":"パソコン"},{"expression":"ケータイ （でんわ）","meaning":"mobile phone, cell phone","reading":"ケータイ（でんわ）"},{"expression":"メール","meaning":"e-mail","reading":"メール"},{"expression":"年賀状","meaning":"New Year's greeting card","reading":"年賀状[ねんがじょう]"},{"expression":"パンチ","meaning":"punch","reading":"パンチ"},{"expression":"ホッチキス","meaning":"stapler","reading":"ホッチキス"},{"expression":"セロテープ","meaning":"Sellotape, Scotch tap, clear adhesive tap","reading":"セロテープ"},{"expression":"消しゴム","meaning":"rubber, eraser","reading":"消しゴム[けしごむ]"},{"expression":"紙","meaning":"paper","reading":"紙[かみ]"},{"expression":"花","meaning":"flower, blossom","reading":"花[はな]"},{"expression":"シャツ","meaning":"shirt","reading":"シャツ"},{"expression":"プレゼント","meaning":"present, gift","reading":"プレゼント"},{"expression":"荷物","meaning":"luggage, baggage, parcel","reading":"荷物[にもつ]"},{"expression":"お金","meaning":"money","reading":"お 金[かね]"},{"expression":"きっぷ","meaning":"ticket","reading":"きっぷ"},{"expression":"クリスマス","meaning":"Christmas","reading":"クリスマス"},{"expression":"父","meaning":"(my) father","reading":"父[ちち]"},{"expression":"母","meaning":"(my) mother","reading":"母[はは]"},{"expression":"お父さん","meaning":"(someone else's) father (also used to address one's own father)","reading":"お 父[とう]さん"},{"expression":"お母さん","meaning":"(someone else's) mother (also used to address one's own mother)","reading":"お 母[かあ]さん"},{"expression":"もう","meaning":"already","reading":"もう"},{"expression":"まだ","meaning":"not yet","reading":"まだ"},{"expression":"これから","meaning":"from now on, soon","reading":"これから"},{"expression":"［～、］すてきですね。","meaning":"What a nice [~]!","reading":"［~、］すてきですね。"},{"expression":"いらっしゃい。","meaning":"How nice of you to come. (lit. Welcome.)","reading":"いらっしゃい。"},{"expression":"どうぞ　お上がり　ください","meaning":"Do come in.","reading":"どうぞ　お 上[あ]がり　ください"},{"expression":"失礼します。","meaning":"May I? (lit. I commit an incivility.)","reading":"失礼[しつれい]します。"},{"expression":"［～は］いかがですか。","meaning":"Won't you have [~]?/Would you like to have [~]? (used when offering something)","reading":"［~は］いかがですか。"},{"expression":"いただきます","meaning":"Thank you./I accept. (said before starting to eat or drink)","reading":"いただきます"},{"expression":"ごちそうさま［でした］。","meaning":"That was delicious. (said after eating or drinking)","reading":"ごちそうさま［でした］。"},{"expression":"スパイン","meaning":"Spain","reading":"スパイン"}],"Lesson 08":[{"expression":"ハンサム［な］","meaning":"handsome","reading":"ハンサム［な］"},{"expression":"きれい［な］","meaning":"beautiful, clean","reading":"きれい［な］"},{"expression":"静かに［な］","meaning":"quiet","reading":"静[しず]かに［な］"},{"expression":"にぎやか［な］","meaning":"lively","reading":"にぎやか［な］"},{"expression":"有名［な］","meaning":"famous","reading":"有名[ゆうめい]［な］"},{"expression":"親切［な］","meaning":"helpful, kind, considerate (not used about one's own family members)","reading":"親切[しんせつ]［な］"},{"expression":"元気［な］","meaning":"healthy, energetic, cheerful","reading":"元気[げんき]［な］"},{"expression":"暇［な］","meaning":"free (time)","reading":"暇[ひま]［な］"},{"expression":"便利［な］","meaning":"convenient","reading":"便利[べんり]［な］"},{"expression":"すてき［な］","meaning":"fine, nice, wonderful","reading":"すてき［な］"},{"expression":"大きく［な］","meaning":"big, large","reading":"大[おお]きく［な］"},{"expression":"小さい","meaning":"small, little","reading":"小[ちい]さい"},{"expression":"新しい","meaning":"new, fresh","reading":"新[あたら]しい"},{"expression":"古い","meaning":"old (not used to describe a person's age)","reading":"古[ふる]い"},{"expression":"いい　（よい）","meaning":"good","reading":"いい　（よい）"},{"expression":"悪い","meaning":"bad","reading":"悪[わる]い"},{"expression":"暑い、熱い","meaning":"hot","reading":"暑[あつ]い、 熱[あつ]い"},{"expression":"寒い","meaning":"cold (referring to temperature)","reading":"寒[さむ]い"},{"expression":"冷たい","meaning":"cold (referring to touch)","reading":"冷[つめ]たい"},{"expression":"難しい","meaning":"difficult","reading":"難[むずか]しい"},{"expression":"易しい","meaning":"easy, tender, kind, gentle, graceful, affectionate, amiable&nbsp;","reading":"易[やさ]しい"},{"expression":"高い","meaning":"expensive, tall, high","reading":"高[たか]い"},{"expression":"安い","meaning":"inexpensive, cheap","reading":"安[やす]い"},{"expression":"低い","meaning":"low","reading":"低[ひく]い"},{"expression":"おもしろい","meaning":"interesting","reading":"おもしろい"},{"expression":"おいしい","meaning":"delicious","reading":"おいしい"},{"expression":"忙しい","meaning":"busy","reading":"忙[いそが]しい"},{"expression":"楽しい","meaning":"enjoyable","reading":"楽[たの]しい"},{"expression":"白い","meaning":"white","reading":"白[しろ]い"},{"expression":"黒い","meaning":"black","reading":"黒[くろ]い"},{"expression":"赤い","meaning":"red","reading":"赤[あか]い"},{"expression":"青い","meaning":"blue","reading":"青[あお]い"},{"expression":"桜","meaning":"cherry (blossom)","reading":"桜[さくら]"},{"expression":"山","meaning":"mountain","reading":"山[やま]"},{"expression":"町","meaning":"town, city","reading":"町[まち]"},{"expression":"食べ物","meaning":"food","reading":"食べ物[たべもの]"},{"expression":"所","meaning":"place","reading":"所[ところ]"},{"expression":"寮","meaning":"dormitory","reading":"寮[りょう]"},{"expression":"レストラン","meaning":"restaurant","reading":"レストラン"},{"expression":"生活","meaning":"Everyday life","reading":"生活[せいかつ]"},{"expression":"［お］仕事","meaning":"work, business (～を　します：do one's job, work)","reading":"［お］ 仕事[しごと]"},{"expression":"どう","meaning":"how","reading":"どう"},{"expression":"どんな～","meaning":"what kind of ~","reading":"どんな~"},{"expression":"とても","meaning":"very","reading":"とても"},{"expression":"あまり","meaning":"not so (used with negatives)","reading":"あまり&nbsp;"},{"expression":"そして","meaning":"and (used to connect sentences)","reading":"そして"},{"expression":"～が、～","meaning":"~, but ~","reading":"~が、~"},{"expression":"おげんきですか。","meaning":"How are you?","reading":"おげんきですか。"},{"expression":"［〜、］もう　一杯　いかがですか。","meaning":"Won't you have another cup of [~]?","reading":"［〜、］もう　一杯[いっぱい]　いかがですか。"},{"expression":"［いいえ、］けっこうです。","meaning":"No, thank you.","reading":"［いいえ、］けっこうです。"},{"expression":"もう　～です［ね］。","meaning":"It's already ~ [,isn't it?]","reading":"もう　~です［ね］。"},{"expression":"そろそろ　失礼します。","meaning":"It's time I was going.","reading":"そろそろ　 失礼[しつれい]します。"},{"expression":"いいえ。","meaning":"Not at all.","reading":"いいえ。"},{"expression":"また　いらっしゃって　ください。","meaning":"Please come again.","reading":"また　いらっしゃって　ください。"},{"expression":"シャンハイ　上海","meaning":"Shanghai","reading":"シャンハイ　 上海[しゃんはい]"},{"expression":"金閣寺","meaning":"Kinkakuji Temple (the Golden Pavilion)","reading":"金閣寺[きんかくじ]"},{"expression":"なら　こえん","meaning":"Nara Park","reading":"なら　こえん"},{"expression":"富士山","meaning":"Mt. Fuji","reading":"富士山[ふじさん]"},{"expression":"そうですね。","meaning":"Well let me see. (pausing)","reading":"そうですね。"}],"Lesson 09":[{"expression":"わかります","meaning":"To understand","reading":"わかります"},{"expression":"好き［な］","meaning":"like","reading":"好[す]き［な］"},{"expression":"嫌い［な］","meaning":"dislike","reading":"嫌[きら]い［な］"},{"expression":"上手です［な］","meaning":"good at","reading":"上手[じょうず]です［な］"},{"expression":"下手［な］","meaning":"poor at","reading":"下手[へた]［な］"},{"expression":"飲み物","meaning":"drinks","reading":"飲み物[のみもの]"},{"expression":"りょうり","meaning":"dish (cooked food), cooking (～を　します：to cook)","reading":"りょうり"},{"expression":"スポーツ","meaning":"sport (～を　します：play sports)","reading":"スポーツ"},{"expression":"野球","meaning":"baseball (～を　します：to play baseball)","reading":"野球[やきゅう]"},{"expression":"ダンス","meaning":"Dance (～を　します：to dance)","reading":"ダンス"},{"expression":"旅行","meaning":"trip, tour (～［を］　します：to travel, make a trip)","reading":"旅行[りょこう]"},{"expression":"音楽","meaning":"music","reading":"音楽[おんがく]"},{"expression":"歌","meaning":"song","reading":"歌[うた]"},{"expression":"クラシック","meaning":"classical music","reading":"クラシック"},{"expression":"ジャズ","meaning":"jazz","reading":"ジャズ"},{"expression":"コンサート","meaning":"concert","reading":"コンサート"},{"expression":"カラオケ","meaning":"karaoke","reading":"カラオケ"},{"expression":"歌舞伎","meaning":"Kabuki (traditional Japanese musical drama)","reading":"歌舞伎[かぶき]"},{"expression":"絵","meaning":"picture, drawing","reading":"絵[え]"},{"expression":"字","meaning":"letter, character","reading":"字[じ]"},{"expression":"漢字","meaning":"Chinese character","reading":"漢字[かんじ]"},{"expression":"ひらがな","meaning":"hiragana script","reading":"ひらがな"},{"expression":"かたかな","meaning":"katakana script","reading":"かたかな"},{"expression":"ローマ字","meaning":"the Roman alphabet","reading":"ローマ字[ろーまじ]"},{"expression":"細かい　お金","meaning":"small change","reading":"細[こま]かい　お 金[かね]"},{"expression":"時間","meaning":"time","reading":"時間[じかん]"},{"expression":"用事","meaning":"something to do, errand","reading":"用事[ようじ]"},{"expression":"約束","meaning":"appointment, promise (～［を］　します：to promise)","reading":"約束[やくそく]"},{"expression":"アルバイト","meaning":"side job (～を　します：to work part-time)","reading":"アルバイト"},{"expression":"ご主人","meaning":"(someone else's) husband","reading":"ご 主人[しゅじん]"},{"expression":"夫／主人","meaning":"(my) husband","reading":"夫[おっと]／ 主人[しゅじん]"},{"expression":"奥さん","meaning":"(someone else's) wife","reading":"奥[おく]さん"},{"expression":"妻／家内","meaning":"(my) wife","reading":"妻[つま]／ 家内[かない]"},{"expression":"子ども","meaning":"child","reading":"子[こ]ども"},{"expression":"だいたい","meaning":"mostly, roughly","reading":"だいたい"},{"expression":"たくさん","meaning":"many, much","reading":"たくさん"},{"expression":"少し","meaning":"a little, a few","reading":"少[すこ]し"},{"expression":"ぜんぜん","meaning":"not at all (used with negatives)","reading":"ぜんぜん"},{"expression":"早く、速く","meaning":"early, quickly, fast","reading":"早[はや]く、 速[はや]く"},{"expression":"どうして","meaning":"why","reading":"どうして"},{"expression":"貸して　ください。","meaning":"Please lend (it to me).","reading":"貸[か]して　ください。"},{"expression":"いいですよ。","meaning":"Sure./Certainly.","reading":"いいですよ。"},{"expression":"ざんねんです［が］","meaning":"I'm sorry [,but], unfortunately","reading":"ざんねんです［が］"},{"expression":"ああ","meaning":"oh","reading":"ああ"},{"expression":"いっしょに　いかがですか。","meaning":"Won't you join me (us)?","reading":"いっしょに　いかがですか。"},{"expression":"［～は］　ちょっと","meaning":"[~] is a bit difficult. (a euphemism used when declining an invitation)","reading":"［~は］　ちょっと"},{"expression":"だめですか。","meaning":"So you can't (come)?","reading":"だめですか。"},{"expression":"また　今度　お願いします。","meaning":"Please ask me again some other time. (used when refusing an invitation indirectly, considering someone's feelings)","reading":"また　 今度[こんど]　お 願[ねが]いします。"},{"expression":"〜から","meaning":"because ~","reading":"〜から"},{"expression":"あります","meaning":"to have","reading":"あります"},{"expression":"よく","meaning":"well, much","reading":"よく"},{"expression":"チケット","meaning":"ticket","reading":"チケット"}],"Lesson 10":[{"expression":"あります","meaning":"to exist, be (referring to inanimate things)","reading":"あります"},{"expression":"います","meaning":"to exist, be (referring to animate things)","reading":"います"},{"expression":"いろいろ［な］","meaning":"various","reading":"いろいろ［な］"},{"expression":"男の　人","meaning":"man","reading":"男[おとこ]の　 人[ひと]"},{"expression":"女の 人","meaning":"woman","reading":"女[おんな]の 人[ひと]"},{"expression":"男の　子","meaning":"boy","reading":"男[おとこ]の　 子[こ]"},{"expression":"女の　子","meaning":"girl","reading":"女[おんな]の　 子[こ]"},{"expression":"犬","meaning":"dog","reading":"犬[いぬ]"},{"expression":"猫","meaning":"cat","reading":"猫[ねこ]"},{"expression":"パンダ","meaning":"panda","reading":"パンダ"},{"expression":"象","meaning":"elephant","reading":"象[ぞう]"},{"expression":"木","meaning":"tree, wood","reading":"木[き]"},{"expression":"物","meaning":"thing","reading":"物[もの]"},{"expression":"電池","meaning":"battery","reading":"電池[でんち]"},{"expression":"箱","meaning":"box","reading":"箱[はこ]"},{"expression":"スイッチ","meaning":"switch","reading":"スイッチ"},{"expression":"冷蔵庫","meaning":"refrigerator","reading":"冷蔵庫[れいぞうこ]"},{"expression":"テーブル","meaning":"table","reading":"テーブル"},{"expression":"ベッド","meaning":"bed","reading":"ベッド"},{"expression":"棚","meaning":"shelf","reading":"棚[たな]"},{"expression":"ドア","meaning":"door","reading":"ドア"},{"expression":"窓","meaning":"window","reading":"窓[まど]"},{"expression":"ポスト","meaning":"postbox, mailbox","reading":"ポスト"},{"expression":"ビル","meaning":"building","reading":"ビル&nbsp;"},{"expression":"ATM","meaning":"cash machine, ATM (Automatic Teller Machine)","reading":"ATM"},{"expression":"コンビニ","meaning":"convenience store","reading":"コンビニ"},{"expression":"公園","meaning":"park","reading":"公園[こうえん]"},{"expression":"喫茶店","meaning":"cafe, coffee shop","reading":"喫茶店[きっさてん]"},{"expression":"～屋","meaning":"~ shop, ~ store","reading":"~ 屋[や]"},{"expression":"乗り場","meaning":"a fixed place to catch taxis, trains, etc.","reading":"乗り場[のりば]"},{"expression":"県","meaning":"prefecture","reading":"県[けん]"},{"expression":"上","meaning":"on, above, over","reading":"上[うえ]"},{"expression":"下","meaning":"under, below, beneath","reading":"下[した]"},{"expression":"前","meaning":"front, before","reading":"前[まえ]"},{"expression":"うしろ","meaning":"back, behind","reading":"うしろ"},{"expression":"右","meaning":"right [side]","reading":"右[みぎ]"},{"expression":"左","meaning":"left [side]","reading":"左[ひだり]"},{"expression":"中","meaning":"in, inside","reading":"中[なか]"},{"expression":"外","meaning":"outside","reading":"外[そと]"},{"expression":"隣","meaning":"next, next door","reading":"隣[となり]"},{"expression":"近く","meaning":"near, vicinity","reading":"近[ちか]く"},{"expression":"間","meaning":"between, among","reading":"間[あいだ]"},{"expression":"～や　～［など］","meaning":"~, ~, and so on","reading":"~や　~［など］"},{"expression":"［どうも］　すみません。","meaning":"Thank you.","reading":"［どうも］　すみません。"},{"expression":"ナンプラー","meaning":"nam pla (fish sauce)","reading":"ナンプラー"},{"expression":"コーナー","meaning":"corner, section","reading":"コーナー"},{"expression":"いちばん　下","meaning":"the bottom","reading":"いちばん　 下[した]"},{"expression":"とうきょう　デズニーランド","meaning":"Tokyo Disneyland","reading":"とうきょう　デズニーランド"}],"Lesson 11":[{"expression":"います　［子どもが〜］","meaning":"to have [a child]","reading":"います　［ 子[こ]どもが〜］"},{"expression":"います［日本に～］","meaning":"to stay, be [in Japan]","reading":"います［ 日本[にっほん]に~］"},{"expression":"かかります","meaning":"to take, cost (referring to time or money)","reading":"かかります"},{"expression":"休みます　［会社を～］","meaning":"to take a day off [work]","reading":"休[やす]みます　［ 会社[かいしゃ]を~］"},{"expression":"一つ","meaning":"one (used when counting things)","reading":"一[ひと]つ"},{"expression":"二つ","meaning":"two (things)","reading":"二[ふた]つ"},{"expression":"三つ","meaning":"three (things)","reading":"三[みっ]つ"},{"expression":"四つ","meaning":"four (things)","reading":"四[よっ]つ"},{"expression":"五つ","meaning":"five (things)","reading":"五[いつ]つ"},{"expression":"六つ","meaning":"six (things)","reading":"六[むっ]つ"},{"expression":"七つ","meaning":"seven (things)","reading":"七[なな]つ"},{"expression":"八つ","meaning":"eight things","reading":"八[やっ]つ"},{"expression":"九つ","meaning":"nine (things)","reading":"九[ここの]つ"},{"expression":"とう","meaning":"ten (things)","reading":"とう"},{"expression":"いくつ","meaning":"how many (things)","reading":"いくつ"},{"expression":"一人","meaning":"one person","reading":"一人[ひとり]"},{"expression":"二人","meaning":"two people","reading":"二人[ふたり]"},{"expression":"ー人","meaning":"- people","reading":"ー人[にん]"},{"expression":"－台","meaning":"counter for machines, cars, etc.","reading":"ー台[だい]"},{"expression":"－枚","meaning":"counter for paper, stamps, etc.","reading":"ー枚[まい]"},{"expression":"－回","meaning":"- times","reading":"ー回[かい]"},{"expression":"りんご","meaning":"apple","reading":"りんご"},{"expression":"みかん","meaning":"mandarin orange","reading":"みかん"},{"expression":"サンドイッチ","meaning":"sandwich","reading":"サンドイッチ"},{"expression":"かれー［ライス］","meaning":"curry [with rice]","reading":"かれー［ライス］"},{"expression":"アイスクリーム","meaning":"ice cream","reading":"アイスクリーム"},{"expression":"切手","meaning":"postage stamp","reading":"切手[きって]"},{"expression":"はがき","meaning":"postcard","reading":"はがき"},{"expression":"封筒","meaning":"envelope","reading":"封筒[ふうとう]"},{"expression":"両親","meaning":"parents","reading":"両親[りょうしん]"},{"expression":"兄弟","meaning":"brothers and sisters, siblings","reading":"兄弟[きょうだい]"},{"expression":"兄","meaning":"(my) elder brother","reading":"兄[あに]"},{"expression":"お兄さん","meaning":"(someone else's) elder brother","reading":"お 兄[にい]さん"},{"expression":"姉","meaning":"(my) elder sister","reading":"姉[あね]"},{"expression":"お姉さん","meaning":"(someone else's) elder sister","reading":"お 姉[ねえ]さん"},{"expression":"弟","meaning":"(my) younger brother","reading":"弟[おとうと]"},{"expression":"弟さん","meaning":"(someone else's) younger brother","reading":"弟[おとうと]さん"},{"expression":"妹","meaning":"(my) younger sister","reading":"妹[いもうと]"},{"expression":"妹さん","meaning":"(someone else's) younger sister","reading":"妹[いもうと]さん"},{"expression":"外国","meaning":"foreign country","reading":"外国[がいこく]"},{"expression":"りゅうがくせい","meaning":"foreign student","reading":"りゅうがくせい"},{"expression":"クラス","meaning":"class","reading":"クラス"},{"expression":"－時間","meaning":"- hours(s)","reading":"ー時間[じかん]"},{"expression":"ーしゅうかん","meaning":"- week(s)","reading":"ーしゅうかん"},{"expression":"ーか月","meaning":"- month(s)","reading":"ーか 月[げつ]"},{"expression":"－年","meaning":"- year(s)","reading":"ー年[ねん]"},{"expression":"～ぐらい","meaning":"about ~","reading":"~ぐらい"},{"expression":"どのくらい","meaning":"how long","reading":"どのくらい"},{"expression":"全部で","meaning":"in total","reading":"全部[ぜんぶ]で"},{"expression":"みんな","meaning":"all, everything, everyone","reading":"みんな"},{"expression":"ーだけ","meaning":"only ~","reading":"ーだけ"},{"expression":"かしこまりました。","meaning":"Certainly, (Sir/Madam).","reading":"かしこまりました。"},{"expression":"いい　［お］天気ですね。","meaning":"Nice weather, isn't it?","reading":"いい　［お］ 天気[てんき]ですね。"},{"expression":"お出かけですか。","meaning":"Are you going out?","reading":"お 出[で]かけですか。"},{"expression":"ちょっと　～まで。","meaning":"I'm just going to ~.","reading":"ちょっと　~まで。"},{"expression":"行ってらっしゃい。","meaning":"See you later./So long. (lit. Go and come back.)","reading":"行[い]ってらっしゃい。"},{"expression":"行って　きます。","meaning":"See you later./So long. (lit. I'm going and coming back.)","reading":"行[い]って　きます。"},{"expression":"船便","meaning":"sea mail","reading":"船便[ふなびん]"},{"expression":"航空便　（エアマール）","meaning":"airmail","reading":"航空[こうくう] 便[びん]　（エアマール）"},{"expression":"お願いします。","meaning":"Please. (lit. ask for a favor)","reading":"お 願[ねが]いします。"},{"expression":"オーストラリア","meaning":"Australia","reading":"オーストラリア"}],"Lesson 12":[{"expression":"簡単［な］","meaning":"easy, simple","reading":"簡単[かんたん]［な］"},{"expression":"近い","meaning":"near","reading":"近[ちか]い"},{"expression":"遠い","meaning":"far","reading":"遠[とお]い"},{"expression":"早い、速い","meaning":"fast, early","reading":"早[はや]い、 速[はや]い"},{"expression":"遅い","meaning":"slow, late","reading":"遅[おそ]い"},{"expression":"多い　［人が～］","meaning":"many [people], much","reading":"多[おお]い　［ 人[ひと]が~］"},{"expression":"少ない［人が～］","meaning":"few [people], a little","reading":"少[すく]ない［ 人[ひと]が~］"},{"expression":"暖かい、温かい","meaning":"warm","reading":"暖[あたた]かい、 温[あたた]かい"},{"expression":"涼しい","meaning":"cool","reading":"涼[すず]しい"},{"expression":"甘い","meaning":"sweet","reading":"甘[あま]い"},{"expression":"辛い","meaning":"hot (taste), spicy","reading":"辛[から]い"},{"expression":"重い","meaning":"heavy","reading":"重[おも]い"},{"expression":"軽い","meaning":"light","reading":"軽[かる]い"},{"expression":"いい［コーヒーが～］","meaning":"prefer [coffee]","reading":"いい［コーヒーが~］"},{"expression":"季節","meaning":"season","reading":"季節[きせつ]"},{"expression":"春","meaning":"spring","reading":"春[はる]"},{"expression":"夏","meaning":"summer","reading":"夏[なつ]"},{"expression":"秋","meaning":"autumn, fall","reading":"秋[あき]"},{"expression":"冬","meaning":"winter","reading":"冬[ふゆ]"},{"expression":"天気","meaning":"weather","reading":"天気[てんき]"},{"expression":"雨","meaning":"rain, rainy","reading":"雨[あめ]"},{"expression":"雪","meaning":"snow, snowy","reading":"雪[ゆき]"},{"expression":"曇り","meaning":"cloudy","reading":"曇[くも]り"},{"expression":"ホテル","meaning":"hotel","reading":"ホテル"},{"expression":"空港","meaning":"airport","reading":"空港[くうこう]"},{"expression":"海","meaning":"sea, ocean","reading":"海[うみ]"},{"expression":"世界","meaning":"world","reading":"世界[せかい]"},{"expression":"パーティー","meaning":"party (～を　します：to give a party)","reading":"パーティー"},{"expression":"［お］祭り","meaning":"festival","reading":"［お］ 祭[まつ]り"},{"expression":"すき焼き","meaning":"sukiyaki (beef and vegetable hot pot)","reading":"すき 焼[や]き"},{"expression":"刺身","meaning":"sashimi (sliced raw fish)","reading":"刺身[さしみ]"},{"expression":"［お］すし","meaning":"sushi (vinegared rice topped with raw rish)","reading":"［お］すし"},{"expression":"てんぷら","meaning":"tempura (seafood and vegetables deep fried in batter)","reading":"てんぷら"},{"expression":"豚肉","meaning":"pork","reading":"豚肉[ぶたにく]"},{"expression":"鶏肉","meaning":"chicken","reading":"鶏肉[けいにく]"},{"expression":"牛肉","meaning":"beef","reading":"牛肉[ぎゅうにく]"},{"expression":"レモン","meaning":"lemon","reading":"レモン"},{"expression":"生け花","meaning":"flower arrangement (～を　します：to practice flower arrangement)","reading":"生け花[いけばな]"},{"expression":"紅葉","meaning":"maple, red leaves of autumn","reading":"紅葉[もみじ]"},{"expression":"どちらも","meaning":"both","reading":"どちらも"},{"expression":"いちばん","meaning":"the most","reading":"いちばん"},{"expression":"ずっと","meaning":"by far","reading":"ずっと"},{"expression":"初めて","meaning":"for the first time","reading":"初[はじ]めて"},{"expression":"ただいま。","meaning":"I'm home.","reading":"ただいま。"},{"expression":"お帰りなさい。","meaning":"Welcome home.","reading":"お 帰[かえ]りなさい。"},{"expression":"わあ、すごい　ひとですね。","meaning":"Wow! Look at all those people!","reading":"わあ、すごい　ひとですね。"},{"expression":"疲れました。","meaning":"I'm tired","reading":"疲[つか]れました。"},{"expression":"祇園祭","meaning":"the Gion Festival (the most famous festival in Kyoto)","reading":"祇園祭[ぎおんまつり]"},{"expression":"<div>ホンコン　（香港）</div>","meaning":"Hong Kong","reading":"ホンコン　（ 香港[ほんこん]）"},{"expression":"シンガポール","meaning":"Singapore","reading":"シンガポール"},{"expression":"どちら","meaning":"which one (of two things)","reading":"どちら"}],"Lesson 13":[{"expression":"遊びます","meaning":"to enjoy oneself, play","reading":"遊[あそ]びます"},{"expression":"泳ぎます","meaning":"to swim","reading":"泳[およ]ぎます"},{"expression":"迎えます","meaning":"to go to meet, welcome","reading":"迎[むか]えます"},{"expression":"つかれます","meaning":"to get tired (when expressing the condition of being tired, つかれました is used)","reading":"つかれます"},{"expression":"結婚します","meaning":"to marry, get married","reading":"結婚[けっこん]します"},{"expression":"買い物します","meaning":"to do shopping","reading":"買い物[かいもの]します"},{"expression":"食事します","meaning":"to have a meal, dine","reading":"食事[しょくじ]します"},{"expression":"散歩します　［公園を～］","meaning":"to take a walk [in a park]","reading":"散歩[さんぽ]します　［ 公園[こうえん]を~］"},{"expression":"大変［な］","meaning":"hard, tough, severe, awful","reading":"大変[たいへん]［な］"},{"expression":"欲しい","meaning":"want (something)","reading":"欲[ほ]しい"},{"expression":"広い","meaning":"wide, spacious","reading":"広[ひろ]い"},{"expression":"狭い","meaning":"narrow, small (room, etc.)","reading":"狭[せま]い"},{"expression":"プール","meaning":"swimming pool","reading":"プール"},{"expression":"川","meaning":"river","reading":"川[かわ]"},{"expression":"美術","meaning":"fine arts","reading":"美術[びじゅつ]"},{"expression":"釣り","meaning":"fishing (～を　します：to fish, anble)","reading":"釣[つ]り"},{"expression":"スキー","meaning":"skiing (～を　します：to ski)","reading":"スキー"},{"expression":"週末","meaning":"weekend","reading":"週末[しゅうまつ]"},{"expression":"［お］正月","meaning":"New Year's Day","reading":"［お］ 正月[しょうがつ]"},{"expression":"～ごろ","meaning":"about ~ (time)","reading":"~ごろ"},{"expression":"何か","meaning":"something","reading":"何[なに]か"},{"expression":"どこか","meaning":"somewhere, some place","reading":"どこか"},{"expression":"のどが　かわきます","meaning":"to get thirsty (when expressing the condition of being thirsty, のどが　かわきました　is used)","reading":"のどが　かわきます"},{"expression":"おなかが　すきます","meaning":"to get hungry (when expressing the condition of being hungry, おなかが　すきました　is used)","reading":"おなかが　すきます"},{"expression":"そう　しましょう。","meaning":"Let's do that. (used when agreeing with someone's suggestion)","reading":"そう　しましょう。"},{"expression":"ご　注　もんは？","meaning":"May I take your order?","reading":"ご　 注[ちゅう]　もんは？"},{"expression":"定食","meaning":"set meal, table d'hote","reading":"定食[ていしょく]"},{"expression":"牛どん","meaning":"bowl of rice topped with beef","reading":"牛[ぎゅう]どん"},{"expression":"［少々］お待ちください","meaning":"Please wait [a moment]. (polite equivalent of です)","reading":"［ 少々[しょうしょう]］お 待[ま]ちください"},{"expression":"別々に","meaning":"separately","reading":"別々[べつべつ]に"}],"Lesson 14":[{"expression":"つけます&nbsp;","meaning":"to turn on","reading":"つけます"},{"expression":"消します","meaning":"to turn off","reading":"消[け]します"},{"expression":"開けます","meaning":"to open","reading":"開[あ]けます"},{"expression":"閉めます","meaning":"to close, shut","reading":"閉[し]めます"},{"expression":"急ぎます","meaning":"to hurry","reading":"急[いそ]ぎます"},{"expression":"待ちます","meaning":"to wait","reading":"待[ま]ちます"},{"expression":"持ちます","meaning":"to hold","reading":"持[も]ちます"},{"expression":"取ります","meaning":"to take, pass","reading":"取[と]ります"},{"expression":"手伝います","meaning":"To help (with a task)","reading":"手伝[てつだ]います"},{"expression":"呼びます","meaning":"To call","reading":"呼[よ]びます"},{"expression":"話します","meaning":"to speak, talk","reading":"話[はな]します"},{"expression":"使います","meaning":"To use","reading":"使[つか]います"},{"expression":"止めます","meaning":"to stop, park","reading":"止[と]めます"},{"expression":"見せます","meaning":"to show","reading":"見[み]せます"},{"expression":"教えます　［住所を～］","meaning":"to tell [an address]","reading":"教[おし]えます　［ 住所[じゅうしょ]を~］"},{"expression":"座ります","meaning":"to sit down","reading":"座[すわ]ります"},{"expression":"立ちます","meaning":"To stand up","reading":"立[た]ちます"},{"expression":"入ります　［喫茶店に～］","meaning":"to enter [a cafe]","reading":"入[はい]ります　［ 喫茶店[きっさてん]に~］"},{"expression":"出ます［喫茶店を～］","meaning":"to go out [of a cafe]","reading":"出[で]ます［ 喫茶店[きっさてん]を~］"},{"expression":"降ります［雨が～］","meaning":"to rain","reading":"降[ふり]ります［ 雨[あめ]が~］"},{"expression":"コピーします","meaning":"to copy","reading":"コピーします"},{"expression":"電気","meaning":"electricity, light","reading":"電気[でんき]"},{"expression":"エアコン","meaning":"air conditioner","reading":"エアコン"},{"expression":"パスポート","meaning":"passport","reading":"パスポート"},{"expression":"名前","meaning":"name","reading":"名前[なまえ]"},{"expression":"住所","meaning":"address","reading":"住所[じゅうしょ]"},{"expression":"地図","meaning":"map","reading":"地図[ちず]"},{"expression":"塩","meaning":"salt","reading":"塩[しお]"},{"expression":"砂糖","meaning":"sugar","reading":"砂糖[さとう]"},{"expression":"問題","meaning":"question, problem, trouble","reading":"問題[もんだい]"},{"expression":"答え","meaning":"answer","reading":"答[こた]え"},{"expression":"読み方","meaning":"how to read, way of reading","reading":"読み方[よみかた]"},{"expression":"～方","meaning":"how to ~, way of ~ing","reading":"~ 方[かた]"},{"expression":"まっすぐ","meaning":"straight","reading":"まっすぐ"},{"expression":"ゆっくり","meaning":"slowly, leisurely","reading":"ゆっくり"},{"expression":"すぐ","meaning":"immediately","reading":"すぐ"},{"expression":"また","meaning":"again","reading":"また"},{"expression":"あとで","meaning":"later","reading":"あとで"},{"expression":"もう　少し","meaning":"a little more","reading":"もう　 少[すこ]し"},{"expression":"もう　～","meaning":"~ more, another ~","reading":"もう　~"},{"expression":"さあ","meaning":"right (used when encouraging some course of action)","reading":"さあ"},{"expression":"あれ？","meaning":"Oh! Eh? (in surprise or wonder)","reading":"あれ？"},{"expression":"信号を　右へ　曲がって　ください。","meaning":"Turn right at the traffic lights.","reading":"信号[しんごう]を　 右[みぎ]へ　 曲[ま]がって　ください。"},{"expression":"これで　お願いします。","meaning":"I'd like to pay with this.","reading":"これで　お 願[ねが]いします。"},{"expression":"お釣り","meaning":"change","reading":"お 釣[つ]り"}],"Lesson 15":[{"expression":"置きます","meaning":"to put","reading":"置[お]きます"},{"expression":"作ります、造ります","meaning":"to make, produce","reading":"作[つく]ります、 造[つく]ります"},{"expression":"売ります","meaning":"to sell","reading":"売[う]ります"},{"expression":"知ります","meaning":"to get to know","reading":"知[し]ります"},{"expression":"済みます","meaning":"to live, dwell, reside, etc.&nbsp;","reading":"済[す]みます"},{"expression":"研究します","meaning":"to do research","reading":"研究[けんきゅう]します"},{"expression":"資料","meaning":"materials, data","reading":"資料[しりょう]"},{"expression":"カタログ","meaning":"catalogue","reading":"カタログ"},{"expression":"時刻表","meaning":"timetable","reading":"時刻[じこく] 表[ひょう]"},{"expression":"服","meaning":"clothes","reading":"服[ふく]"},{"expression":"製品","meaning":"products","reading":"製品[せいひん]"},{"expression":"ソフト","meaning":"software","reading":"ソフト"},{"expression":"電子辞書","meaning":"electric dictionary","reading":"電子[でんし] 辞書[じしょ]"},{"expression":"経済","meaning":"economy","reading":"経済[けいざい]"},{"expression":"市役所","meaning":"municipal office, city hall","reading":"市役所[しやくしょ]"},{"expression":"高校","meaning":"senior high school","reading":"高校[こうこう]"},{"expression":"歯医者","meaning":"dentist, dentist's","reading":"歯医者[はいしゃ]"},{"expression":"独身","meaning":"single, unmarried","reading":"独身[どくしん]"},{"expression":"すみません","meaning":"I'm sorry.","reading":"すみません"},{"expression":"みなさん","meaning":"Ladies and Gentlemen, everybody","reading":"みなさん"},{"expression":"思い出します","meaning":"to remember, recollect","reading":"思い出[おもいだ]します"},{"expression":"いらっしゃいます","meaning":"to be (honorific equivalent of います)","reading":"いらっしゃいます"}],"Lesson 16":[{"expression":"乗ります　［電車に～］","meaning":"to ride, get on [a train]","reading":"乗[の]ります　［ 電車[でんしゃ]に~］"},{"expression":"降ります　［電車を～］","meaning":"to get off [a train]","reading":"降[お]ります　［ 電車[でんしゃ]を~］"},{"expression":"乗り換えます","meaning":"to change (train, etc.)","reading":"乗り換[のりか]えます"},{"expression":"あびます　［シャワーを～］","meaning":"to take [a shower]","reading":"あびます　［シャワーを~］"},{"expression":"入れます","meaning":"to put in, insert","reading":"入[い]れます"},{"expression":"出します","meaning":"to take out, hand in, send","reading":"出[だ]します"},{"expression":"おろします　［お金を～］","meaning":"to withdraw","reading":"おろします　［お 金[かね]を~］"},{"expression":"入ります　［大学に～］","meaning":"to enter [university]","reading":"入[はい]ります　［ 大学[だいがく]に~］"},{"expression":"出ます　［大学を～］","meaning":"to graduate from [university]","reading":"出[で]ます　［ 大学[だいがく]を~］"},{"expression":"押します","meaning":"to push, press","reading":"押[お]します"},{"expression":"始めます","meaning":"to start, begin","reading":"始[はじ]めます"},{"expression":"見学します","meaning":"to tour, visit a place to study it","reading":"見学[けんがく]します"},{"expression":"電話します","meaning":"to phone","reading":"電話[でんわ]します"},{"expression":"若い","meaning":"young","reading":"若[わか]い"},{"expression":"長い","meaning":"long","reading":"長[なが]い"},{"expression":"短い","meaning":"short","reading":"短[みじか]い"},{"expression":"明るい","meaning":"bright, light","reading":"明[あか]るい"},{"expression":"暗い","meaning":"dark","reading":"暗[くら]い"},{"expression":"体","meaning":"body, health","reading":"体[からだ]"},{"expression":"頭","meaning":"head, brain","reading":"頭[あたま]"},{"expression":"髪","meaning":"hair","reading":"髪[かみ]"},{"expression":"顔","meaning":"face","reading":"顔[かお]"},{"expression":"目","meaning":"eye","reading":"目[め]"},{"expression":"耳","meaning":"ear","reading":"耳[みみ]"},{"expression":"鼻","meaning":"nose","reading":"鼻[はな]"},{"expression":"口","meaning":"mouth","reading":"口[くち]"},{"expression":"歯","meaning":"tooth","reading":"歯[は]"},{"expression":"おなか","meaning":"stomach","reading":"おなか"},{"expression":"足","meaning":"leg, foot","reading":"足[あし]"},{"expression":"脊","meaning":"height","reading":"脊"},{"expression":"サービス","meaning":"service","reading":"サービス"},{"expression":"ジョギング","meaning":"jogging (~を　します：to jog)","reading":"ジョギング"},{"expression":"シャワー","meaning":"shower","reading":"シャワー"},{"expression":"緑","meaning":"green, greenery","reading":"緑[みどり]"},{"expression":"［お］寺","meaning":"Buddhist temple","reading":"［お］ 寺[てら]"},{"expression":"神社","meaning":"Shinto shrine","reading":"神社[じんじゃ]"},{"expression":"－番","meaning":"number -&nbsp;","reading":"番[ばん]"},{"expression":"どうやって","meaning":"in what way, how","reading":"どうやって"},{"expression":"どの～","meaning":"which ~ (used for three or more)","reading":"どの~"},{"expression":"どれ","meaning":"which one (of three or more things)","reading":"どれ"},{"expression":"すごいですね。","meaning":"That's amazing!","reading":"すごいですね。"},{"expression":"［いいえ、］　まだまだです。","meaning":"[No,] I still have a long way to go.","reading":"［いいえ、］　まだまだです。"},{"expression":"おひきだしですか。","meaning":"Are you making a withdrawal?","reading":"おひきだしですか。"},{"expression":"まず","meaning":"first of all","reading":"まず"},{"expression":"つぎに","meaning":"next, as a next step","reading":"つぎに"},{"expression":"キャッシュカード","meaning":"cash dispensing card","reading":"キャッシュカード"},{"expression":"安保番号","meaning":"personal identification number, PIN","reading":"安保[あんぽ] 番号[ばんごう]"},{"expression":"金額","meaning":"amount of money","reading":"金額[きんがく]"},{"expression":"確認","meaning":"confirmation (～します：to confirm)","reading":"確認[かくにん]"},{"expression":"ボタン","meaning":"button","reading":"ボタン"},{"expression":"雪祭り","meaning":"Snow Festival","reading":"雪[ゆき] 祭[まつ]り"},{"expression":"バンドン","meaning":"Bandung (in Indonesia)","reading":"バンドン"},{"expression":"フランケン","meaning":"Franken (in Germany)","reading":"フランケン"},{"expression":"ベラクルス","meaning":"Veracruz (in Mexico)","reading":"ベラクルス"}],"Lesson 17":[{"expression":"覚えます","meaning":"to memorize","reading":"覚[おぼ]えます"},{"expression":"忘れます","meaning":"to forget","reading":"忘[わす]れます"},{"expression":"なくします","meaning":"to lose","reading":"なくします"},{"expression":"払います","meaning":"to pay","reading":"払[はら]います"},{"expression":"返します","meaning":"to give back, return","reading":"返[かえ]します"},{"expression":"出かけます","meaning":"to go out","reading":"出[で]かけます"},{"expression":"脱ぎます","meaning":"to take off (clothes, shoes, etc.)","reading":"脱[ぬ]ぎます"},{"expression":"持って　行きます","meaning":"to take (something)","reading":"持[も]って　 行[い]きます"},{"expression":"持って　来ます","meaning":"to bring (something)","reading":"持[も]って　 来[き]ます"},{"expression":"心配します","meaning":"to worry","reading":"心配[しんぱい]します"},{"expression":"残業します","meaning":"to work overtime","reading":"残業[ざんぎょう]します"},{"expression":"出張します","meaning":"to go on a business trip","reading":"出張[しゅっちょう]します"},{"expression":"飲みます　［薬を〜］","meaning":"to take [medicine] (literally to drink medicine)","reading":"飲[の]みます　［ 薬[くすり]を〜］"},{"expression":"入ります　［おふろに〜］","meaning":"to take [a bath]","reading":"入[はい]ります　［おふろに〜］"},{"expression":"大切［な］","meaning":"important, precious","reading":"大切[たいせつ]［な］"},{"expression":"大丈夫［な］","meaning":"all right","reading":"大丈夫[だいじょうぶ]［な］"},{"expression":"危ない","meaning":"dangerous","reading":"危[あぶ]ない"},{"expression":"禁煙","meaning":"no smoking","reading":"禁煙[きんえん]"},{"expression":"［健康］　保険証","meaning":"[health] insurance card","reading":"［ 健康[けんこう]］　 保険[ほけん] 証[しょう]"},{"expression":"熱","meaning":"temperature, fever","reading":"熱[ねつ]"},{"expression":"病気","meaning":"illness, disease","reading":"病気[びょうき]"},{"expression":"薬","meaning":"medicine","reading":"薬[くすり]"},{"expression":"［お］ふろ","meaning":"bath","reading":"［お］ふろ"},{"expression":"上着","meaning":"jacket, outerwear","reading":"上着[うわぎ]"},{"expression":"下着","meaning":"underwear","reading":"下着[したぎ]"},{"expression":"２，３　日","meaning":"two or three days","reading":"２，３　 日[にち]"},{"expression":"２，３～","meaning":"two or three ~ (where ~ is a counter suffix)","reading":"２，３~"},{"expression":"～までに","meaning":"before ~, by ~ (indicating time limit)","reading":"~までに"},{"expression":"ですから","meaning":"therefore, so","reading":"ですから"},{"expression":"どう　しましたか。","meaning":"What's the matter?","reading":"どう　しましたか。"},{"expression":"のど","meaning":"throat","reading":"のど"},{"expression":"［～が］　痛いです。","meaning":"(I) have a pain [in my ~].","reading":"［~が］　 痛[いた]いです。"},{"expression":"かぜ","meaning":"cold, flu","reading":"かぜ"},{"expression":"お大事に。","meaning":"Take care of yourself. (said to people who are ill)","reading":"お 大事[だいじ]に。"},{"expression":"それから","meaning":"and, furthermore","reading":"それから"}],"Lesson 18":[{"expression":"できます","meaning":"to be able to, can","reading":"できます"},{"expression":"洗います","meaning":"to wash","reading":"洗[あら]います"},{"expression":"弾きます","meaning":"<div>to play (stringed instrument, piano, etc.)<br></div>","reading":"弾[ひ]きます"},{"expression":"歌います","meaning":"to sing","reading":"歌[うた]います"},{"expression":"集めます","meaning":"to collect, gather","reading":"集[あつ]めます"},{"expression":"捨てます","meaning":"to throw away","reading":"捨[す]てます"},{"expression":"換えます","meaning":"to exchange, change","reading":"換[か]えます"},{"expression":"運転します","meaning":"to drive","reading":"運転[うんてん]します"},{"expression":"予約します","meaning":"to reserve, book","reading":"予約[よやく]します"},{"expression":"ピアノ","meaning":"piano","reading":"ピアノ"},{"expression":"メートル","meaning":"meter","reading":"メートル"},{"expression":"現金","meaning":"cash","reading":"現金[げんきん]"},{"expression":"趣味","meaning":"hobby","reading":"趣味[しゅみ]"},{"expression":"日記","meaning":"diary","reading":"日記[にっき]"},{"expression":"お祈り","meaning":"prayer (～を　します：to pray)","reading":"お 祈[いの]り"},{"expression":"課長","meaning":"section head","reading":"課長[かちょう]"},{"expression":"部長","meaning":"department head","reading":"部長[ぶちょう]"},{"expression":"社長","meaning":"company president","reading":"社長[しゃちょう]"},{"expression":"動物","meaning":"animal","reading":"動物[どうぶつ]"},{"expression":"馬","meaning":"horse","reading":"馬[うま]"},{"expression":"インターネット","meaning":"the Internet","reading":"インターネット"},{"expression":"特に","meaning":"especially","reading":"特[とく]に"},{"expression":"へえ","meaning":"What! Really! (used when expressing surprise)","reading":"へえ"},{"expression":"それは　おもしろいですね。","meaning":"That's interesting, isn't it?","reading":"それは　おもしろいですね。"},{"expression":"なかなか","meaning":"not easily (used with negatives)","reading":"なかなか"},{"expression":"ほんとうですか。","meaning":"Really?","reading":"ほんとうですか。"},{"expression":"ぜひ","meaning":"by all means, really","reading":"ぜひ"},{"expression":"故郷","meaning":"Furusato (a song title meaning 'Home Town')","reading":"故郷[ふるさと]"}],"Lesson 19":[{"expression":"登ります、上ります","meaning":"to climb, go up","reading":"登[のぼ]ります、 上[のぼ]ります"},{"expression":"泊まります［ホテルに～］","meaning":"to stay [at a hotel]","reading":"泊[と]まります［ホテルに~］"},{"expression":"掃除します","meaning":"to clean (a room)","reading":"掃除[そうじ]します"},{"expression":"洗濯します","meaning":"to wash (clothes)","reading":"洗濯[せんたく]します"},{"expression":"なります","meaning":"to become","reading":"なります"},{"expression":"眠い","meaning":"sleepy","reading":"眠[ねむ]い"},{"expression":"強い","meaning":"strong","reading":"強[つよ]い"},{"expression":"弱い","meaning":"weak","reading":"弱[よわ]い"},{"expression":"練習","meaning":"practice (~[を] します: to practice)","reading":"練習[れんしゅう]"},{"expression":"ゴルフ","meaning":"golf (~を　します: to play golf)","reading":"ゴルフ"},{"expression":"相撲","meaning":"sumo wrestling (～を　します: to wrestle)","reading":"相撲[すもう]"},{"expression":"日","meaning":"day, date","reading":"日[ひ]"},{"expression":"調子","meaning":"condition","reading":"調子[ちょうし]"},{"expression":"一度","meaning":"once","reading":"一度[いちど]"},{"expression":"一度も","meaning":"not once, never (used with negatives)","reading":"一度[いちで]も"},{"expression":"だんだん","meaning":"gradually","reading":"だんだん"},{"expression":"もうすぐ","meaning":"soon","reading":"もうすぐ"},{"expression":"おかげさまで","meaning":"Thank you. (used when expressing gratitude for help received)","reading":"おかげさまで"},{"expression":"でも","meaning":"but","reading":"でも"},{"expression":"かんぱい","meaning":"Cheers!","reading":"かんぱい"},{"expression":"ダイエット","meaning":"diet (～を　します: to go on a diet)","reading":"ダイエット"},{"expression":"無理［な］","meaning":"excessive, impossible","reading":"無理[むり]［な］"},{"expression":"体に　いい","meaning":"good for one's health","reading":"体[からだ]に　いい"},{"expression":"葛飾北斉　<b>(FIX)</b>","meaning":"a famous Edo-period woodblock artist and painter (1760-1849)","reading":"葛飾[かつしか] 北[きた] 斉[ひとし]"},{"expression":"お茶","meaning":"tea ceremony","reading":"お 茶[ちゃ]"}],"Lesson 20":[{"expression":"要ります［ビザが～］","meaning":"to need, require [a visa]","reading":"要[い]ります［ビザが~］"},{"expression":"調べます","meaning":"to check, investigate","reading":"調[しら]べます"},{"expression":"修理します","meaning":"to repair","reading":"修理[しゅうり]します"},{"expression":"僕","meaning":"I (an informal equivalent of わたし used by men)","reading":"僕[ぼく]"},{"expression":"君","meaning":"you (an informal equivalent of あなた used to address people of equal or lower status)","reading":"君[きみ]"},{"expression":"～君","meaning":"Mr. (an informal equivalent of ～さん used to address people of equal or lower status; also often appended to boys' names)","reading":"~ 君[くん]"},{"expression":"うん","meaning":"yes (an informal equivalent of はい)","reading":"うん"},{"expression":"ううん","meaning":"no (an informal equivalent of いいえ)","reading":"ううん"},{"expression":"ことば","meaning":"word, language","reading":"ことば"},{"expression":"着物","meaning":"kimono (traditional Japanese attire)","reading":"着物[きもの]"},{"expression":"ビザ","meaning":"visa","reading":"ビザ"},{"expression":"初め","meaning":"the beginning","reading":"初[はじ]め"},{"expression":"終わり","meaning":"the end of ~, The End","reading":"終[お]わり"},{"expression":"こっち","meaning":"this way, this place (an informal equivalent of こちら)","reading":"こっち"},{"expression":"そっち","meaning":"that way, that place near the listener (an informal equivalent of そちら)","reading":"そっち"},{"expression":"あっち","meaning":"that way, that place over there (an informal equivalent of あちら)","reading":"あっち"},{"expression":"どっち","meaning":"which one (of two things), which way, where (an informal equivalent of どちら)","reading":"どっち"},{"expression":"みんあで","meaning":"all together","reading":"みんあで"},{"expression":"～けど","meaning":"~, but (an informal equivalent of が)","reading":"~けど"},{"expression":"おなかが　いっぱいです","meaning":"(I'm) full","reading":"おなかが　いっぱいです"},{"expression":"よかったら","meaning":"if you like","reading":"よかったら"}],"Lesson 21":[{"expression":"思います","meaning":"to think","reading":"思[おも]います"},{"expression":"言います","meaning":"to say","reading":"言[い]います"},{"expression":"勝ちます","meaning":"to win","reading":"勝[か]ちます"},{"expression":"負けます","meaning":"to lose, be beaten","reading":"負[ま]けます"},{"expression":"あります　［おまつりが～］","meaning":"[a festival] to be held, take place","reading":"あります　［おまつりが~］"},{"expression":"役に　立ちます","meaning":"to be useful","reading":"役[やく]に　 立[た]ちます"},{"expression":"動きます","meaning":"to move, work","reading":"動[うご]きます"},{"expression":"やめます　［かいしゃを～］","meaning":"to quit or retire from work [a company], stop, give up","reading":"やめます　［かいしゃを~］"},{"expression":"気を　つけます","meaning":"to pay attention, take care","reading":"気[き]を　つけます"},{"expression":"留学します","meaning":"to study abroad","reading":"留学[りゅうがく]します"},{"expression":"むだ［な］","meaning":"wasteful","reading":"むだ［な］"},{"expression":"不便［な］","meaning":"inconvenient","reading":"不便[ふべん]［な］"},{"expression":"すごい","meaning":"awful, great (express astonishment or admiration)","reading":"すごい"},{"expression":"ほんとう","meaning":"true","reading":"ほんとう"},{"expression":"うそ","meaning":"lie","reading":"うそ"},{"expression":"自動車","meaning":"car, automobile","reading":"自動車[じどうしゃ]"},{"expression":"交通","meaning":"transport, traffic","reading":"交通[こうつう]"},{"expression":"物価","meaning":"[commodity] prices","reading":"物価[ぶっか]"},{"expression":"放送","meaning":"announcement, broadcast","reading":"放送[ほうそう]"},{"expression":"ニュース","meaning":"news","reading":"ニュース"},{"expression":"アニメ","meaning":"anime (Japanese animation)","reading":"アニメ"},{"expression":"マンガ","meaning":"comic book","reading":"マンガ"},{"expression":"デザイン","meaning":"design, artwork","reading":"デザイン"},{"expression":"夢","meaning":"dream","reading":"夢[ゆめ]"},{"expression":"天才","meaning":"genius","reading":"天才[てんさい]"},{"expression":"試合","meaning":"game, match (～を　します: to play a game/match)","reading":"試合[しあい]"},{"expression":"意見","meaning":"opinion","reading":"意見[いけん]"},{"expression":"話","meaning":"talk, speech, what one says, story (～を　します: to talk, tell a story)","reading":"話[はなし]"},{"expression":"地球","meaning":"earth","reading":"地球[ちきゅう]"},{"expression":"月","meaning":"moon","reading":"月[つき]"},{"expression":"最近","meaning":"recently, these days","reading":"最近[さいきん]"},{"expression":"たぶん","meaning":"probably, perhaps, maybe","reading":"たぶん"},{"expression":"きっと","meaning":"surely, definitely","reading":"きっと"},{"expression":"ほんとうに","meaning":"really","reading":"ほんとうに"},{"expression":"～に　ついて","meaning":"about ~, concerning ~","reading":"~に　ついて"},{"expression":"久しぶりでしね。","meaning":"It's been a long time [since we last met].","reading":"久[ひさ]しぶりでしね。"},{"expression":"～でも　飲みませんか。","meaning":"How about drinking ~ or something?","reading":"~でも　 飲[の]みませんか。"},{"expression":"もちろん","meaning":"of course","reading":"もちろん"},{"expression":"もう　帰らないと。。。","meaning":"I have to get home now...","reading":"もう　 帰[かえ]らないと。。。"}],"Lesson 22":[{"expression":"着ます","meaning":"to put on (a shirt, etc.)","reading":"着[き]ます"},{"expression":"はきます","meaning":"to put on (shoes, trousers, etc.)","reading":"はきます"},{"expression":"かぶります","meaning":"to put on (a hat, etc.)","reading":"かぶります"},{"expression":"かけます　［めがねを～］","meaning":"to put on [glasses]","reading":"かけます　［めがねを~］"},{"expression":"します　［ネクタイを～］","meaning":"to put on [a tie]","reading":"します　［ネクタイを~］"},{"expression":"生まれます","meaning":"to be born","reading":"生[う]まれます"},{"expression":"わたしたち","meaning":"we","reading":"わたしたち"},{"expression":"コート","meaning":"coat","reading":"コート"},{"expression":"セーター","meaning":"sweater","reading":"セーター"},{"expression":"スーツ","meaning":"suit","reading":"スーツ"},{"expression":"帽子","meaning":"hat, cap","reading":"帽子[ぼうし]"},{"expression":"眼鏡","meaning":"glasses","reading":"眼鏡[めがね]"},{"expression":"ケーキ","meaning":"cake","reading":"ケーキ"},{"expression":"［お］弁当","meaning":"box lunch","reading":"［お］ 弁当[べんとう]"},{"expression":"ロボット","meaning":"robot","reading":"ロボット"},{"expression":"ユーモア","meaning":"humor","reading":"ユーモア"},{"expression":"都合","meaning":"convenience","reading":"都合[つごう]"},{"expression":"よく","meaning":"often","reading":"よく"},{"expression":"えーと","meaning":"well, let me see","reading":"えーと"},{"expression":"おめでとう　［ございます］。","meaning":"Congratulations. (used on birthdays, at weddings, etc.)","reading":"おめでとう　［ございます］。"},{"expression":"お探しですか。","meaning":"Are you looking for ~?","reading":"お 探[さが]しですか。"},{"expression":"でわ","meaning":"well then,","reading":"でわ"},{"expression":"家賃","meaning":"rent","reading":"家賃[やちん]"},{"expression":"ダイニングキッチン","meaning":"kitching with a dining area","reading":"ダイニングキッチン"},{"expression":"和室","meaning":"Japanese-style room","reading":"和室[わしつ]"},{"expression":"押入れ","meaning":"Japanese-style closet","reading":"押入[おしい]れ"},{"expression":"布団","meaning":"Japanese-style mattress and quilt","reading":"布団[ふとん]"}],"Lesson 23":[{"expression":"聞きます［先生に～］","meaning":"to ask [the teacher]","reading":"聞[き]きます［ 先生[せんせい]に~］"},{"expression":"回します","meaning":"to turn","reading":"回[まわ]します"},{"expression":"（障ります）［ドアに～］","meaning":"to touch [a door]","reading":"（ 障[さわ]ります）［ドアに~］"},{"expression":"出ます［お釣りが～］","meaning":"[change] to come out","reading":"出[で]ます［お 釣[つ]りが~］"},{"expression":"歩きます","meaning":"to walk","reading":"歩[ある]きます"},{"expression":"渡ります［橋を～］","meaning":"to cross [a bridge]","reading":"渡[わた]ります［ 橋[はし]を~］"},{"expression":"曲がります［右へ～］","meaning":"to turn [to the right]","reading":"曲[ま]がります［ 右[みぎ]へ~］"},{"expression":"寂しい","meaning":"lonely","reading":"寂[さび]しい"},{"expression":"［お］湯","meaning":"hot water","reading":"［お］ 湯[ゆ]"},{"expression":"音","meaning":"sound","reading":"音[おと]"},{"expression":"サイズ","meaning":"size","reading":"サイズ"},{"expression":"故障","meaning":"breakdown (～します: to break down)","reading":"故障[こしょう]"},{"expression":"道","meaning":"road, way","reading":"道[みち]"},{"expression":"交差点","meaning":"crossroads","reading":"交差点[こうさてん]"},{"expression":"信号","meaning":"traffic lights","reading":"信号[しんごう]"},{"expression":"角","meaning":"corner","reading":"角[かど]"},{"expression":"橋","meaning":"bridge","reading":"橋[はし]"},{"expression":"駐車場","meaning":"car park, parking lot","reading":"駐車[ちゅうしゃ] 場[じょう]"},{"expression":"なんかいも","meaning":"many times","reading":"なんかいも"},{"expression":"～目","meaning":"the -th (indicating order)","reading":"~ 目[め]"},{"expression":"引きます","meaning":"to pull","reading":"引[ひ]きます"},{"expression":"変えます","meaning":"to change","reading":"変[か]えます"},{"expression":"建物","meaning":"building","reading":"建物[たてもの]"}],"Lesson 24":[{"expression":"くれます","meaning":"to give (me)","reading":"くれます"},{"expression":"直します","meaning":"to repair, correct","reading":"直[なお]します"},{"expression":"連れて　行きます","meaning":"to take (someone)","reading":"連[つ]れて　 行[い]きます"},{"expression":"連れて　来ます","meaning":"to bring (someone)","reading":"連[つ]れて　 来[き]ます"},{"expression":"送ります［人を～］","meaning":"to escort [someone], go with","reading":"送[おく]ります［ 人[ひと]を~］"},{"expression":"紹介します","meaning":"to introduce","reading":"紹介[しょうかい]します"},{"expression":"案内します","meaning":"to show around, show the way","reading":"案内[あんない]します"},{"expression":"説明します","meaning":"to explain","reading":"説明[せつめい]します"},{"expression":"おじいさん／おじちゃん","meaning":"grandfather, old man","reading":"おじいさん／おじちゃん"},{"expression":"おばあさん／おばあちゃん","meaning":"grandmother, old woman","reading":"おばあさん／おばあちゃん"},{"expression":"準備","meaning":"preparation (～［を］　します: to prepare)","reading":"準備[じゅんび]"},{"expression":"引っ越し","meaning":"moving out (～［を］　します: to move out)","reading":"引っ越[ひっこ]し"},{"expression":"［お］菓子","meaning":"sweets, snacks","reading":"［お］ 菓子[かし]"},{"expression":"ホームステイ","meaning":"homestay","reading":"ホームステイ"},{"expression":"全部","meaning":"all","reading":"全部[ぜんぶ]"},{"expression":"自分で","meaning":"by oneself","reading":"自分[じぶん]で"},{"expression":"ほかに","meaning":"besides","reading":"ほかに"}],"Lesson 25":[{"expression":"考えます","meaning":"To think, consider","reading":"考[かんが]えます"},{"expression":"着きます","meaning":"To arrive","reading":"着[つ]きます"},{"expression":"取ります［年を～］","meaning":"To grow [old]","reading":"取[と]ります［ 年[とし]を~］"},{"expression":"足ります","meaning":"to be enough, be sufficient","reading":"足[た]ります"},{"expression":"田舎","meaning":"countryside, hometown","reading":"田舎[いなか]"},{"expression":"チャンス","meaning":"chance","reading":"チャンス"},{"expression":"億","meaning":"hundred million","reading":"億[おく]"},{"expression":"もし［～たら］","meaning":"if","reading":"もし［~たら］"},{"expression":"意味","meaning":"meaning","reading":"意味[いみ]"},{"expression":"もしもし","meaning":"hello (used on the phone)","reading":"もしもし"},{"expression":"転勤","meaning":"transfer (～します: to be transferred to another office)","reading":"転勤[てんきん]"},{"expression":"こと","meaning":"thing, matter (～の　こと: to thing about ~)","reading":"こと"},{"expression":"暇","meaning":"free time","reading":"暇[ひま]"},{"expression":"［いろいろ］お世話に　なりました。","meaning":"Thank you for everything you've done for me.","reading":"［いろいろ］お 世話[せわ]に　なりました。"},{"expression":"頑張ります","meaning":"do one's best","reading":"頑張[がんば]ります"},{"expression":"どうぞ　お元気で。","meaning":"Please take care of yourself. (said when expecting a long separation)","reading":"どうぞ　お 元気[げんき]で。"},{"expression":"ベトナム","meaning":"Vietnam","reading":"ベトナム"}]}
+
+const LESSONS = Object.keys(RAW).sort((a,b)=>parseInt(a.split(" ")[1])-parseInt(b.split(" ")[1]));
+const BOOK1 = LESSONS.slice(0,12), BOOK2 = LESSONS.slice(12);
+const EXAM_DATE_POORI = "2025-07-05";
+const NEW_CARDS_CUTOFF_DAYS = 21;
+
+// ── FSRS-4.5 ──────────────────────────────────────────────────────────────────
+const W=[0.4072,1.1829,3.1262,15.4722,7.2102,0.5316,1.0651,0.0589,1.5330,0.1544,1.0070,1.9395,0.1100,0.2900,2.2700,0.2500,2.9898,0.5100,0.8360];
+const DECAY=-0.5, FACTOR=Math.pow(0.9,1/DECAY)-1;
+function fsrsIS(r){return Math.max(W[r-1],0.1);}
+function fsrsID(r){return Math.min(Math.max(W[4]-Math.exp(W[5]*(r-1))+1,1),10);}
+function fsrsFC(e,s){return Math.pow(1+FACTOR*e/s,DECAY);}
+function fsrsNS(d,s,r,rating){
+  if(rating===1)return W[11]*Math.pow(d,-W[12])*(Math.pow(s+1,W[13])-1)*Math.exp(W[14]*(1-r));
+  const hp=rating===2?W[15]:1,eb=rating===4?W[16]:1;
+  return s*(Math.exp(W[8])*(11-d)*Math.pow(s,-W[9])*(Math.exp(W[10]*(1-r))-1)*hp*eb+1);
+}
+function fsrsND(d,rating){return Math.min(Math.max(d-W[6]*(rating-3)+W[7]*(W[4]-(d-W[6]*(rating-3))),1),10);}
+function fsrsNI(s,ret=0.9){return Math.max(1,Math.round(s/FACTOR*(Math.pow(ret,1/DECAY)-1)));}
+function nextFSRS(card,rating){
+  const s0=card.stability,now=Date.now();
+  if(!s0||card.reps===0){
+    const stability=fsrsIS(rating),difficulty=fsrsID(rating);
+    return{stability,difficulty,interval:rating===1?0:fsrsNI(stability),reps:rating===1?0:1,lastReview:now};
+  }
+  const elapsed=Math.max(0,(now-(card.lastReview||now))/86400000);
+  const ret=fsrsFC(elapsed,s0);
+  const newD=fsrsND(card.difficulty||5,rating),newS=fsrsNS(newD,s0,ret,rating);
+  return{stability:Math.max(newS,0.1),difficulty:newD,interval:rating===1?0:fsrsNI(newS),reps:rating===1?0:(card.reps||0)+1,lastReview:now};
+}
+function previewIntervals(card){return[1,2,3,4].map(r=>fmtDays(nextFSRS(card,r).interval));}
+function fmtDays(d){
+  if(d===0)return"<10m";if(d===1)return"1d";
+  if(d<30)return`${d}d`;if(d<365)return`${Math.round(d/30)}mo`;
+  return`${(d/365).toFixed(1)}y`;
+}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+// ── Study plan ────────────────────────────────────────────────────────────────
+function calcDailyNewCap(examDate, masteryTargetDate){
+  // If mastery target date set, use that minus 21 days as the effective deadline
+  // Otherwise fall back to exam date minus NEW_CARDS_CUTOFF_DAYS
+  const today=new Date();today.setHours(0,0,0,0);
+  if(masteryTargetDate){
+    const target=new Date(masteryTargetDate);target.setHours(0,0,0,0);
+    // Cards need ~21 days of reviews after first seen to reach mastery
+    // So last new card must be studied 21 days before mastery target
+    const activeDays=Math.max(1,Math.round((target-today)/86400000)-NEW_CARDS_CUTOFF_DAYS);
+    return Math.max(5,Math.min(40,Math.ceil(997/activeDays)));
+  }
+  if(!examDate)return 15;
+  const exam=new Date(examDate);exam.setHours(0,0,0,0);
+  const totalDays=Math.max(1,Math.round((exam-today)/86400000));
+  const activeDays=Math.max(1,totalDays-NEW_CARDS_CUTOFF_DAYS);
+  return Math.max(5,Math.min(30,Math.ceil(997/activeDays)));
+}
+function daysUntilExam(examDate){
+  if(!examDate)return null;
+  const today=new Date();today.setHours(0,0,0,0);
+  const exam=new Date(examDate);exam.setHours(0,0,0,0);
+  return Math.round((exam-today)/86400000);
+}
+
+// ── Greetings ─────────────────────────────────────────────────────────────────
+const GP=[
+  (n,d)=>`いらっしゃい、${n}！ ${d} days until the exam — let's go! 🔥`,
+  (n,d)=>`おかえり、${n}！ Every card today is one more word you own. 💪`,
+  (n,d)=>`Welcome back, ${n}！ ${d} days left — you're right on track. ✨`,
+  (n,d)=>`${n}、がんばれ！ The streak continues. Don't break it now! 🎯`,
+  (n,d)=>`Ready to study, ${n}？ ${d} days to go — one session at a time. 📚`,
+  (n,d)=>`お疲れ様、${n}！ Consistency beats intensity. You've got this. 🌸`,
+  (n,d)=>`${n}、今日も！ ${d} days left. Each review makes the next one easier. ⚡`,
+  (n,d)=>`Welcome, ${n}！ The best time to review is right now. 始めよう！ 🎌`,
+  (n,d)=>`${n}！ Only ${d} days left — but you're building something real. 🌟`,
+  (n,d)=>`おはよう、${n}！ Another day, another set of words locked in. 🗝️`,
+];
+const GA=[
+  n=>`Hey ${n}！ Testing mode — break things, that's the job. 🛠️`,
+  n=>`Welcome back, ${n}！ What are we poking at today? 👀`,
+  n=>`${n} in the house！ No exam pressure, just vibes. 😎`,
+  n=>`おかえり、${n}！ Admin mode activated. 🔧`,
+  n=>`Hey ${n}！ You're the quality control around here. 🧪`,
+];
+function getGreeting(profile,days){
+  const seed=new Date().getDate();
+  if(profile==="Poori"){const fn=GP[seed%GP.length];const n=isDark?'Poornima':'Poori';return fn(n,days??"?");}
+  const fn=GA[seed%GA.length];const n=isDark?'Abdul':'Dul';return fn(n);
+}
+
+// ── Default profile ───────────────────────────────────────────────────────────
+function defaultProfile(name){
+  const isPoori=name==="Poori";
+  return{
+    cardStates:{},
+    settings:{
+      examDate:isPoori?EXAM_DATE_POORI:null,
+      masteryTargetDate:null,
+      newCardCap:isPoori?calcDailyNewCap(EXAM_DATE_POORI):20,
+      capOverride:false,
+      productionEnabled:false,
+      selectedLessons:[...LESSONS],
+    },
+    dailyLog:{},
+  };
+}
+function cardKey(lesson,idx,dir){return`${lesson}::${idx}::${dir}`;}
+
+// ── Export / Import helpers ───────────────────────────────────────────────────
+function exportData(name,data){
+  const blob=new Blob([JSON.stringify({profile:name,exportedAt:new Date().toISOString(),data},null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download=`mnn-backup-${name}-${new Date().toISOString().slice(0,10)}.json`;
+  a.click();URL.revokeObjectURL(a.href);
+}
+function importData(onSuccess){
+  const input=document.createElement("input");
+  input.type="file";input.accept=".json";
+  input.onchange=e=>{
+    const file=e.target.files[0];if(!file)return;
+    const reader=new FileReader();
+    reader.onload=ev=>{
+      try{
+        const parsed=JSON.parse(ev.target.result);
+        if(parsed.data)onSuccess(parsed.data);
+        else alert("Invalid backup file.");
+      }catch{alert("Could not read file.");}
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+
+// ── State ─────────────────────────────────────────────────────────────────────
+// ── Theme ─────────────────────────────────────────────────────────────────────
+let isDark = localStorage.getItem('mnn-theme') !== 'light';
+function applyTheme() {
+  document.body.classList.toggle('light', !isDark);
+  localStorage.setItem('mnn-theme', isDark ? 'dark' : 'light');
+}
+applyTheme();
+
+let state = {
+  activeProfile: null,
+  profileData: null,
+  loading: false,
+  tab: "study",
+  showDeckBrowser: false,
+  filterBook: "all",
+  screen: "home", // home | review | summary
+  sessionMode: "study", // study | review
+  showLessonDetail: false,
+  showStudyPlan: false,
+  showReviewChart: false,
+  chartMode: 'days',
+  showReviewChart: false,
+  queue: [],
+  queueIdx: 0,
+  flipped: false,
+  sessionResults: [],
+  saveTimer: null,
+};
+
+// ── Study plan table ─────────────────────────────────────────────────────────
+function buildPlanTable(profileData) {
+  const { cardStates, settings, dailyLog } = profileData;
+  const { selectedLessons, newCardCap } = settings;
+  const orderedLessons = [...selectedLessons].sort((a,b)=>parseInt(a.split(' ')[1])-parseInt(b.split(' ')[1]));
+
+  const seenByLesson = {};
+  for (const lesson of orderedLessons) {
+    seenByLesson[lesson] = (RAW[lesson]||[]).filter((_,i)=>
+      (cardStates[cardKey(lesson,i,'rec')]?.reps||0) > 0
+    ).length;
+  }
+  const totalByLesson = {};
+  for (const lesson of orderedLessons) totalByLesson[lesson] = RAW[lesson]?.length || 0;
+
+  const studyDates = Object.keys(dailyLog).filter(d=>dailyLog[d].newSeen>0).sort();
+  const pastDays = studyDates.map(date => ({
+    date, byLesson: dailyLog[date].newByLesson || {}, total: dailyLog[date].newSeen
+  }));
+
+  // remaining by lesson (ground truth from cardStates)
+  const rem = {};
+  for (const lesson of orderedLessons) rem[lesson] = totalByLesson[lesson] - seenByLesson[lesson];
+
+  // build future days
+  const todayStr = localDateStr();
+  const pastDateSet = new Set(studyDates);
+  const futureDays = [];
+  const datePtr = new Date(todayStr + 'T00:00:00');
+
+  while (true) {
+    const dateStr = localDateStr(datePtr);
+    if (!pastDateSet.has(dateStr)) {
+      let cap = newCardCap;
+      const byLesson = {};
+      for (const lesson of orderedLessons) {
+        if (cap <= 0) break;
+        if ((rem[lesson]||0) <= 0) continue;
+        const give = Math.min(rem[lesson], cap);
+        byLesson[lesson] = give;
+        rem[lesson] -= give;
+        cap -= give;
+      }
+      if (Object.keys(byLesson).length === 0) break;
+      futureDays.push({ date: dateStr, byLesson });
+    }
+    datePtr.setDate(datePtr.getDate() + 1);
+    if (futureDays.length > 300) break;
+  }
+
+  return { pastDays, futureDays, orderedLessons, totalByLesson, seenByLesson };
+}
+
+function localDateStr(d) {
+  const dt = d || new Date();
+  return dt.getFullYear() + '-' + String(dt.getMonth()+1).padStart(2,'0') + '-' + String(dt.getDate()).padStart(2,'0');
+}
+
+function fmtTableDate(dateStr) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return (d.getMonth()+1) + '/' + d.getDate();
+}
+
+function renderPlanTable(profileData, accentColor) {
+  const { pastDays, futureDays, orderedLessons, totalByLesson, seenByLesson } = buildPlanTable(profileData);
+  const allDays = [...pastDays, ...futureDays];
+  const pastCount = pastDays.length;
+  const todayStr = localDateStr();
+
+  if (allDays.length === 0) {
+    return '<div style="color:var(--text3);font-size:13px;padding:20px 0;">No cards remaining — all lessons complete!</div>';
+  }
+
+  const LABEL_W = 120;
+  const COL_W = 60;
+
+  let rows = '';
+  for (let li = 0; li < orderedLessons.length; li++) {
+    const lesson = orderedLessons[li];
+    const total = totalByLesson[lesson];
+    const seen = seenByLesson[lesson];
+    const done = seen >= total;
+    let cells = '';
+    for (let i = 0; i < allDays.length; i++) {
+      const day = allDays[i];
+      const isPast = i < pastCount;
+      const val = day.byLesson[lesson] || 0;
+      if (!val) {
+        cells += '<td style="border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);min-width:' + COL_W + 'px;"></td>';
+      } else {
+        const color = isPast ? 'var(--good)' : 'var(--accent)';
+        cells += '<td style="text-align:center;border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);min-width:' + COL_W + 'px;padding:4px 2px;"><span style="font-size:13px;font-weight:500;color:' + color + ';">' + val + '</span></td>';
+      }
+    }
+    const rowBg = li%2===0 ? 'var(--surface)' : 'var(--surface2)';
+    rows += '<tr style="background:' + rowBg + ';">'
+      + '<td style="position:sticky;left:0;z-index:5;background:' + rowBg + ';padding:6px 10px;border-right:1px solid var(--border);border-bottom:1px solid var(--border2);white-space:nowrap;min-width:' + LABEL_W + 'px;">'
+      + '<span style="font-size:12px;color:' + (done?'var(--good)':'var(--text2)') + ';">' + lesson + '</span>'
+      + '<span style="font-size:10px;color:var(--text3);margin-left:6px;">' + seen + '/' + total + '</span>'
+      + '</td>' + cells + '</tr>';
+  }
+
+  let headers = '<th style="position:sticky;left:0;z-index:11;background:var(--surface2);min-width:' + LABEL_W + 'px;padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);border-right:1px solid var(--border);"><div style="font-size:11px;color:var(--text2);font-weight:500;">Lesson</div></th>';
+  for (let i = 0; i < allDays.length; i++) {
+    const day = allDays[i];
+    const isPast = i < pastCount;
+    const isToday = day.date === todayStr;
+    const dayColor = isPast ? 'var(--good)' : isToday ? 'var(--accent)' : 'var(--text2)';
+    const bg = isToday ? 'background:rgba(77,157,224,0.08);' : '';
+    headers += '<th style="min-width:' + COL_W + 'px;width:' + COL_W + 'px;padding:4px 2px;text-align:center;border-bottom:1px solid var(--border);border-right:1px solid var(--border2);' + bg + '">'
+      + '<div style="font-size:13px;font-weight:600;color:' + dayColor + ';">Day ' + (i+1) + '</div>'
+      + '<div style="font-size:10px;color:var(--text3);margin-top:1px;">' + fmtTableDate(day.date) + '</div>'
+      + '</th>';
+  }
+
+  return '<div style="overflow-x:auto;overflow-y:auto;max-height:65vh;border:1px solid var(--border);border-radius:10px;">'
+    + '<table style="border-collapse:collapse;font-size:12px;font-family:var(--font-ui);">'
+    + '<thead><tr style="position:sticky;top:0;z-index:10;background:var(--surface2);">' + headers + '</tr></thead>'
+    + '<tbody>' + rows + '</tbody>'
+    + '</table></div>';
+}
+
+// ── Mastery projection ───────────────────────────────────────────────────────
+function projectMasteryDate(lesson, profileData, planData) {
+  const { cardStates } = profileData;
+  const { orderedLessons } = planData;
+  const cards = RAW[lesson] || [];
+  const today = new Date(); today.setHours(0,0,0,0);
+  const MASTERY_REPS = 3, MASTERY_INTERVAL = 7;
+  const UNSEEN_BUFFER = 21; // days after first study to reach mastery
+
+  let maxDays = 0;
+
+  // Find which day index this lesson's unseen cards get studied (from plan)
+  // planData.futureDays is array of { date, byLesson }
+  const allDays = [...planData.pastDays, ...planData.futureDays];
+
+  cards.forEach((_, i) => {
+    const key = cardKey(lesson, i, 'rec');
+    const st = cardStates[key];
+
+    if (!st || st.reps === 0) {
+      // Unseen: find first future day this lesson appears in plan
+      let studyDate = null;
+      for (const day of planData.futureDays) {
+        if (day.byLesson[lesson]) { studyDate = day.date; break; }
+      }
+      if (!studyDate) {
+        // lesson not in future plan (already capped out?), use last future day + buffer
+        const last = planData.futureDays[planData.futureDays.length - 1];
+        studyDate = last ? last.date : localDateStr(today);
+      }
+      const studyDt = new Date(studyDate + 'T00:00:00');
+      const daysToStudy = Math.max(0, Math.round((studyDt - today) / 86400000));
+      maxDays = Math.max(maxDays, daysToStudy + UNSEEN_BUFFER);
+    } else if (st.reps >= MASTERY_REPS && st.interval >= MASTERY_INTERVAL) {
+      // Already mastered — contributes 0 extra days
+    } else {
+      // Seen but not mastered — forward simulate FSRS until interval >= 7
+      let sim = { ...st };
+      let daysFromNow = 0;
+      const lastReview = sim.lastReview || Date.now();
+      // first, add days until next due
+      const daysSinceLast = Math.max(0, (Date.now() - lastReview) / 86400000);
+      const daysUntilDue = Math.max(0, (sim.interval || 1) - daysSinceLast);
+      daysFromNow += daysUntilDue;
+
+      let safetyCount = 0;
+      while ((sim.reps < MASTERY_REPS || sim.interval < MASTERY_INTERVAL) && safetyCount < 10) {
+        const next = nextFSRS(sim, 3); // assume Good rating
+        daysFromNow += next.interval;
+        sim = { ...sim, ...next };
+        safetyCount++;
+      }
+      maxDays = Math.max(maxDays, Math.ceil(daysFromNow));
+    }
+  });
+
+  return maxDays; // days from today
+}
+
+function fmtProjection(days) {
+  if (days <= 0) return { rel: '~0 days', abs: 'Today', color: 'var(--good)' };
+  const date = new Date(); date.setHours(0,0,0,0);
+  date.setDate(date.getDate() + days);
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const abs = months[date.getMonth()] + ' ' + date.getDate();
+  const rel = days === 1 ? '~1 day' : '~' + days + ' days';
+  const color = days <= 14 ? 'var(--good)' : days <= 90 ? 'var(--gold)' : 'var(--text2)';
+  return { rel, abs, color };
+}
+
+// ── Upcoming reviews chart ───────────────────────────────────────────────────
+function calcUpcomingReviews(profileData) {
+  const { cardStates, settings } = profileData;
+  const { selectedLessons, productionEnabled } = settings;
+  const dirs = productionEnabled ? ['rec','pro'] : ['rec'];
+  const todayMs = new Date(); todayMs.setHours(0,0,0,0);
+  const today = todayMs.getTime();
+
+  // bucket: dateStr -> count
+  const buckets = {};
+
+  for (const lesson of selectedLessons) {
+    (RAW[lesson]||[]).forEach((_,i) => {
+      dirs.forEach(dir => {
+        const st = cardStates[cardKey(lesson,i,dir)];
+        if (!st || !st.lastReview || st.reps === 0) return;
+        const dueMs = st.lastReview + st.interval * 86400000;
+        const dueDt = new Date(dueMs); dueDt.setHours(0,0,0,0);
+        const dueDay = dueDt.getTime();
+        // only today and future
+        if (dueDay < today) return;
+        const dateStr = dueDt.toISOString().slice(0,10);
+        buckets[dateStr] = (buckets[dateStr]||0) + 1;
+      });
+    });
+  }
+  return buckets;
+}
+
+function buildChartBars(buckets, mode) {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  let bars = [];
+
+  if (mode === 'days') {
+    for (let i = 0; i < 14; i++) {
+      const d = new Date(today); d.setDate(d.getDate() + i);
+      const dateStr = d.toISOString().slice(0,10);
+      const label = months[d.getMonth()] + ' ' + d.getDate();
+      bars.push({ label, value: buckets[dateStr]||0, isToday: i===0 });
+    }
+  } else if (mode === 'weeks') {
+    for (let w = 0; w < 8; w++) {
+      const start = new Date(today); start.setDate(start.getDate() + w*7);
+      const end = new Date(start); end.setDate(end.getDate() + 6);
+      let total = 0;
+      for (let d = 0; d < 7; d++) {
+        const dd = new Date(start); dd.setDate(dd.getDate() + d);
+        total += buckets[dd.toISOString().slice(0,10)]||0;
+      }
+      const label = months[start.getMonth()]+' '+start.getDate()+'–'+end.getDate();
+      bars.push({ label, value: total, isToday: w===0 });
+    }
+  } else if (mode === 'months') {
+    for (let m = 0; m < 12; m++) {
+      const d = new Date(today.getFullYear(), today.getMonth()+m, 1);
+      const dEnd = new Date(today.getFullYear(), today.getMonth()+m+1, 0);
+      let total = 0;
+      for (let day = new Date(m===0?today:d); day <= dEnd; day.setDate(day.getDate()+1)) {
+        total += buckets[day.toISOString().slice(0,10)]||0;
+      }
+      bars.push({ label: months[d.getMonth()], value: total, isToday: m===0 });
+    }
+  }
+  return bars;
+}
+
+function renderReviewChart(profileData, accentColor) {
+  const buckets = calcUpcomingReviews(profileData);
+  // chartMode stored on window to survive re-renders without full state
+  const mode = window._chartMode || 'days';
+  const bars = buildChartBars(buckets, mode);
+  const maxVal = Math.max(...bars.map(b=>b.value), 1);
+  const CHART_H = 140; // px height of bar area
+
+  const btnStyle = (m) => `padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;border:1px solid ${mode===m?accentColor:'var(--border2)'};background:${mode===m?accentColor:'transparent'};color:${mode===m?'#fff':'var(--text2)'};`;
+
+  const barWidth = mode==='days' ? 'calc((100% - '+((bars.length-1)*6)+'px) / '+bars.length+')' : 'calc((100% - '+((bars.length-1)*4)+'px) / '+bars.length+')';
+  const gap = mode==='days' ? '6px' : '4px';
+
+  let barsHTML = bars.map(b => {
+    const h = Math.max(2, Math.round((b.value / maxVal) * CHART_H));
+    const isZero = b.value === 0;
+    return `<div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+      <div style="font-size:10px;color:${isZero?'var(--text3)':accentColor};margin-bottom:3px;font-weight:500;">${isZero?'':b.value}</div>
+      <div style="width:100%;height:${CHART_H}px;display:flex;align-items:flex-end;">
+        <div style="width:100%;height:${h}px;background:${b.isToday?accentColor:accentColor+'99'};border-radius:3px 3px 0 0;transition:height .3s;"></div>
+      </div>
+      <div style="font-size:9px;color:${b.isToday?accentColor:'var(--text3)'};margin-top:4px;text-align:center;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;">${b.label}</div>
+    </div>`;
+  }).join('');
+
+  const totalShown = bars.reduce((s,b)=>s+b.value,0);
+  const modeLabel = mode==='days'?'next 14 days':mode==='weeks'?'next 8 weeks':'next 12 months';
+
+  return `<div>
+    <div style="display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;">
+      <button onclick="window._chartMode='days';window._reRenderProgress()" style="${btnStyle('days')}">14 Days</button>
+      <button onclick="window._chartMode='weeks';window._reRenderProgress()" style="${btnStyle('weeks')}">8 Weeks</button>
+      <button onclick="window._chartMode='months';window._reRenderProgress()" style="${btnStyle('months')}">12 Months</button>
+      <span style="margin-left:auto;font-size:11px;color:var(--text3);align-self:center;">${totalShown} reviews ${modeLabel}</span>
+    </div>
+    <div style="display:flex;align-items:flex-end;gap:${gap};overflow-x:auto;padding-bottom:4px;">
+      ${barsHTML}
+    </div>
+  </div>`;
+}
+
+// ── Upcoming reviews chart ───────────────────────────────────────────────────
+function calcUpcomingReviews(profileData) {
+  const { cardStates, settings } = profileData;
+  const { selectedLessons, productionEnabled } = settings;
+  const dirs = productionEnabled ? ['rec','pro'] : ['rec'];
+  const today = new Date(); today.setHours(0,0,0,0);
+  const todayStr2 = localDateStr(today);
+  const todayTs = today.getTime();
+
+  // bucket: dateStr -> count
+  const byDay = {};
+
+  for (const lesson of selectedLessons) {
+    (RAW[lesson]||[]).forEach((_,i) => {
+      dirs.forEach(dir => {
+        const key = cardKey(lesson, i, dir);
+        const st = cardStates[key];
+        if (!st || st.reps === 0) return; // unseen, skip
+        const lastReview = st.lastReview || 0;
+        const interval = st.interval || 1;
+        const dueTs = lastReview + interval * 86400000;
+        const dueDate = new Date(Math.max(dueTs, todayTs));
+        dueDate.setHours(0,0,0,0);
+        const dateStr = localDateStr(dueDate);
+        byDay[dateStr] = (byDay[dateStr]||0) + 1;
+      });
+    });
+  }
+  return byDay;
+}
+
+function buildChartData(byDay, mode) {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const todayStr = localDateStr(today);
+  const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  if (mode === 'days') {
+    const bars = [];
+    for (let i = 0; i < 14; i++) {
+      const d = new Date(today); d.setDate(d.getDate() + i);
+      const dateStr = d.toISOString().slice(0,10);
+      const label = MONTHS[d.getMonth()] + ' ' + d.getDate();
+      bars.push({ label, value: byDay[dateStr]||0, isToday: i===0 });
+    }
+    return bars;
+  }
+
+  if (mode === 'weeks') {
+    const bars = [];
+    for (let w = 0; w < 8; w++) {
+      const start = new Date(today); start.setDate(start.getDate() + w*7);
+      const end = new Date(start); end.setDate(end.getDate() + 6);
+      let total = 0;
+      for (let d = 0; d < 7; d++) {
+        const day = new Date(start); day.setDate(day.getDate() + d);
+        total += byDay[day.toISOString().slice(0,10)]||0;
+      }
+      const label = MONTHS[start.getMonth()]+' '+start.getDate()+'–'+end.getDate();
+      bars.push({ label, value: total, isToday: w===0 });
+    }
+    return bars;
+  }
+
+  if (mode === 'months') {
+    const bars = [];
+    for (let m = 0; m < 12; m++) {
+      const start = new Date(today.getFullYear(), today.getMonth() + m, 1);
+      const end = new Date(today.getFullYear(), today.getMonth() + m + 1, 0);
+      let total = 0;
+      for (let d = new Date(start); d <= end; d.setDate(d.getDate()+1)) {
+        total += byDay[d.toISOString().slice(0,10)]||0;
+      }
+      bars.push({ label: MONTHS[start.getMonth()]+' '+start.getFullYear(), value: total, isToday: m===0 });
+    }
+    return bars;
+  }
+  return [];
+}
+
+function renderReviewChart(profileData, accentColor, chartMode) {
+  const byDay = calcUpcomingReviews(profileData);
+  const bars = buildChartData(byDay, chartMode);
+  const maxVal = Math.max(...bars.map(b=>b.value), 1);
+  const CHART_H = 160;
+  const BAR_W = chartMode==='days' ? 38 : chartMode==='weeks' ? 60 : 54;
+  const GAP = chartMode==='days' ? 6 : 8;
+  const totalWidth = bars.length * (BAR_W + GAP);
+
+  const barsHTML = bars.map(b => {
+    const barH = Math.max(2, Math.round((b.value / maxVal) * CHART_H));
+    const bg = b.isToday ? accentColor : 'var(--surface3)';
+    const labelColor = b.isToday ? accentColor : 'var(--text2)';
+    return `<div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;width:${BAR_W}px;">
+      <div style="font-size:10px;font-weight:600;color:${b.value>0?labelColor:'var(--text3)'};">${b.value||''}</div>
+      <div style="width:100%;height:${CHART_H}px;display:flex;align-items:flex-end;">
+        <div style="width:100%;height:${barH}px;background:${bg};border-radius:4px 4px 0 0;transition:height .3s;${b.value===0?'opacity:0.2':''}"></div>
+      </div>
+      <div style="font-size:${chartMode==='days'?9:9}px;color:var(--text3);text-align:center;line-height:1.2;word-break:break-word;max-width:${BAR_W}px;">${b.label}</div>
+    </div>`;
+  }).join('');
+
+  const totalReviews = bars.reduce((s,b)=>s+b.value,0);
+  const avgPerDay = chartMode==='days' ? (totalReviews/14).toFixed(1)
+    : chartMode==='weeks' ? (totalReviews/56).toFixed(1)
+    : (totalReviews/365).toFixed(1);
+
+  return `<div>
+    <div style="display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;">
+      ${['days','weeks','months'].map(m=>`
+        <div class="btn chart-mode-btn" data-mode="${m}" style="padding:5px 14px;border-radius:20px;font-size:12px;
+          background:${chartMode===m?accentColor:'var(--surface2)'};
+          color:${chartMode===m?'#fff':'var(--text2)'};
+          border:1px solid ${chartMode===m?'transparent':'var(--border2)'};">
+          ${m==='days'?'14 Days':m==='weeks'?'8 Weeks':'12 Months'}
+        </div>`).join('')}
+      <div style="margin-left:auto;font-size:11px;color:var(--text3);align-self:center;">
+        avg ${avgPerDay}/day · ${totalReviews} total
+      </div>
+    </div>
+    <div style="overflow-x:auto;padding-bottom:4px;">
+      <div style="display:flex;gap:${GAP}px;align-items:flex-end;min-width:${totalWidth}px;padding:4px 2px 0;">
+        ${barsHTML}
+      </div>
+    </div>
+  </div>`;
+}
+
+// ── Render engine ─────────────────────────────────────────────────────────────
+function render(){
+  const root=document.getElementById("app");
+  root.innerHTML="";
+  if(state.loading){
+    root.innerHTML=`<div style="display:flex;align-items:center;justify-content:center;height:100vh;color:var(--text2);font-family:var(--font-ui)">Loading...</div>`;
+    return;
+  }
+  if(!state.activeProfile){renderProfileSelector(root);return;}
+  if(state.screen==="review"){renderReview(root);return;}
+  if(state.screen==="summary"){renderSummary(root);return;}
+  renderMain(root);
+}
+
+// ── Save with debounce ────────────────────────────────────────────────────────
+function scheduleSave(){
+  if(state.saveTimer)clearTimeout(state.saveTimer);
+  state.saveTimer=setTimeout(()=>{
+    if(state.activeProfile&&state.profileData)
+      window._fbSave(state.activeProfile,state.profileData);
+  },1500);
+}
+function setState(patch,doRender=true){
+  Object.assign(state,patch);
+  if(patch.profileData!==undefined)scheduleSave();
+  if(doRender)render();
+}
+function updateProfile(patch){
+  setState({profileData:{...state.profileData,...patch}});
+}
+function updateSettings(patch){
+  const s={...state.profileData.settings,...patch};
+  if((patch.examDate!==undefined||patch.masteryTargetDate!==undefined)&&!patch.capOverride){
+    s.newCardCap=calcDailyNewCap(s.examDate, s.masteryTargetDate);
+    s.capOverride=false;
+  }
+  updateProfile({settings:s});
+}
+function updateCardState(key,cs){
+  const cardStates={...state.profileData.cardStates,[key]:cs};
+  updateProfile({cardStates});
+}
+function logToday(isNew,isAgain,lesson){
+  const today=localDateStr();
+  const log=state.profileData.dailyLog||{};
+  const d=log[today]||{reviewed:0,newSeen:0,againCount:0,newByLesson:{}};
+  const newByLesson={...( d.newByLesson||{})};
+  if(isNew&&lesson) newByLesson[lesson]=(newByLesson[lesson]||0)+1;
+  updateProfile({dailyLog:{...log,[today]:{reviewed:d.reviewed+1,newSeen:d.newSeen+(isNew?1:0),againCount:d.againCount+(isAgain?1:0),newByLesson}}});
+}
+
+// ── Profile selector ──────────────────────────────────────────────────────────
+function renderProfileSelector(root){
+  // Load Poori's exam date from Firebase for correct countdown
+  // While loading, show a placeholder; update once loaded
+  const pooriEmoji = isDark ? '🌕' : '🌸';
+  const pooriName  = isDark ? 'Poornima' : 'Poori';
+  const abdulEmoji = isDark ? '🔭' : '😸';
+  const abdulName  = isDark ? 'Abdul' : 'Dul';
+
+  // Stars for dark mode
+  const starsHTML = isDark ? (() => {
+    let s = '';
+    const rand = (min, max) => (Math.sin(min * 9301 + max * 49297 + 233995) * 0.5 + 0.5) * (max - min) + min;
+    for (let i = 0; i < 80; i++) {
+      const x = rand(i * 3, i * 7) % 100;
+      const y = rand(i * 5, i * 11) % 100;
+      const size = rand(i, i * 2) % 2 + 0.5;
+      const opacity = rand(i * 2, i * 4) % 0.5 + 0.3;
+      const delay = rand(i, i * 3) % 3;
+      s += `<div style="position:absolute;left:${x}%;top:${y}%;width:${size}px;height:${size}px;border-radius:50%;background:#fff;opacity:${opacity};animation:twinkle ${2+delay}s ease-in-out infinite alternate;"></div>`;
+    }
+    return s;
+  })() : (() => {
+    let s = '';
+    const rand = (a, b) => (Math.sin(a * 7919 + b * 6271 + 1013) * 0.5 + 0.5) * (b - a) + a;
+    const petalColors = ['#ffb7c5','#ffc0cb','#ffcdd5','#ffe4e8','#fff0f3','#f9a8b8'];
+    for (let i = 0; i < 18; i++) {
+      const x = rand(i * 4, i * 9) % 100;
+      const dur = 6 + rand(i, i * 2) % 6;
+      const delay = rand(i * 2, i * 5) % 8;
+      const size = 7 + rand(i, i * 3) % 8;
+      const color = petalColors[i % petalColors.length];
+      const tilt = rand(i, i*4) % 40 - 20;
+      s += `<div style="position:absolute;left:${x}%;top:-30px;width:${size}px;height:${size*1.3}px;background:${color};border-radius:50% 0 50% 0;opacity:0.7;transform:rotate(${tilt}deg);animation:petalFall ${dur}s ease-in ${delay}s infinite;"></div>`;
+    }
+    return s;
+  })();
+
+  root.innerHTML=`
+  <style>
+    @keyframes twinkle { from { opacity: 0.2; transform: scale(0.8); } to { opacity: 0.9; transform: scale(1.2); } }
+    @keyframes petalFall { 0% { transform: translateY(-30px) rotate(0deg); opacity:0; } 10% { opacity:0.7; } 90% { opacity:0.5; } 100% { transform: translateY(110vh) rotate(360deg); opacity:0; } }
+    @keyframes floatCard { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-6px); } }
+    .profile-card-poori { }
+    .profile-card-abdul { }
+  </style>
+  <div style="min-height:100vh;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--font-ui);position:relative;overflow:hidden;">
+    ${starsHTML}
+    <div style="position:absolute;top:16px;right:16px;z-index:10;" id="profileThemeBtn"></div>
+    <div class="slide-in" style="text-align:center;margin-bottom:44px;position:relative;z-index:1;">
+      <div style="font-size:30px;font-family:var(--font-jp);font-weight:300;letter-spacing:4px;color:var(--text);margin-bottom:8px;">みんなの日本語</div>
+      <div style="font-size:12px;color:var(--text3);letter-spacing:3px;">SELECT PROFILE</div>
+    </div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;padding:0 20px;position:relative;z-index:1;">
+
+      <!-- Poori card -->
+      <div class="btn profile-card profile-card-poori" data-name="Poori"
+        style="width:180px;padding:32px 20px;border-radius:20px;background:${isDark?'rgba(36,28,12,0.85)':'var(--surface)'};border:1px solid var(--gold);text-align:center;
+        box-shadow:${isDark?'0 8px 40px rgba(200,151,58,0.25),0 0 0 1px rgba(200,151,58,0.1)':'0 4px 24px rgba(200,151,58,0.12)'};
+        backdrop-filter:blur(8px);">
+        <div style="font-size:44px;margin-bottom:14px;line-height:1;">${pooriEmoji}</div>
+        <div style="font-size:${isDark?'17':'20'}px;font-weight:600;color:var(--text);margin-bottom:8px;letter-spacing:${isDark?'1':'0'}px;">${pooriName}</div>
+        <div id="pooriDays" style="font-size:11px;color:var(--gold);letter-spacing:1px;">loading...</div>
+      </div>
+
+      <!-- Abdul card -->
+      <div class="btn profile-card profile-card-abdul" data-name="Abdul"
+        style="width:180px;padding:32px 20px;border-radius:20px;background:${isDark?'rgba(12,20,36,0.85)':'var(--surface)'};border:1px solid var(--accent);text-align:center;
+        box-shadow:${isDark?'0 8px 40px rgba(77,157,224,0.2),0 0 0 1px rgba(77,157,224,0.1)':'0 4px 24px rgba(77,157,224,0.12)'};
+        backdrop-filter:blur(8px);">
+        <div style="font-size:44px;margin-bottom:14px;line-height:1;">${abdulEmoji}</div>
+        <div style="font-size:20px;font-weight:600;color:var(--text);margin-bottom:8px;">${abdulName}</div>
+        <div style="font-size:11px;color:var(--accent);letter-spacing:1px;">Testing</div>
+      </div>
+
+    </div>
+  </div>`;
+
+  // Load Poori's actual exam date from Firebase to show correct countdown
+  window._fbLoad('Poori').then(data => {
+    const examDate = data?.settings?.examDate || EXAM_DATE_POORI;
+    const days = daysUntilExam(examDate);
+    const el = document.getElementById('pooriDays');
+    if (el) el.textContent = days !== null ? days + 'd until exam' : 'No exam date set';
+  }).catch(() => {
+    const el = document.getElementById('pooriDays');
+    if (el) el.textContent = daysUntilExam(EXAM_DATE_POORI) + 'd until exam';
+  });
+
+  root.querySelectorAll(".profile-card").forEach(el=>{
+    el.addEventListener("click",()=>selectProfile(el.dataset.name));
+  });
+  renderThemeBtn("profileThemeBtn");
+}
+
+async function selectProfile(name){
+  setState({loading:true});
+  let data=await window._fbLoad(name);
+  if(!data)data=defaultProfile(name);
+  if(!data.settings.capOverride)
+    data.settings.newCardCap=calcDailyNewCap(data.settings.examDate, data.settings.masteryTargetDate);
+  setState({activeProfile:name,profileData:data,loading:false,tab:"study",screen:"home"});
+}
+
+// ── Review queue ──────────────────────────────────────────────────────────────
+// Returns cards for a lesson in shuffled order for a given dir filter fn
+function getLessonCards(lesson, dirs, cardStates, filterFn) {
+  const cards = [];
+  (RAW[lesson]||[]).forEach((card,idx)=>{
+    dirs.forEach(dir=>{
+      const key=cardKey(lesson,idx,dir);
+      const st=cardStates[key]||{stability:0,difficulty:5,interval:0,reps:0,lastReview:0};
+      const c={...card,lesson,idx,key,dir,...st};
+      if(filterFn(c)) cards.push(c);
+    });
+  });
+  return shuffle(cards);
+}
+
+// Build review queue: due cards only, lesson order, uncapped
+function buildReviewQueue(){
+  const{cardStates,settings}=state.profileData;
+  const{selectedLessons,productionEnabled}=settings;
+  const dirs=productionEnabled?["rec","pro"]:["rec"];
+  const orderedLessons=[...selectedLessons].sort((a,b)=>parseInt(a.split(" ")[1])-parseInt(b.split(" ")[1]));
+  const queue=[];
+  for(const lesson of orderedLessons){
+    const due=getLessonCards(lesson,dirs,cardStates,c=>c.reps>0);
+    queue.push(...due);
+  }
+  return queue;
+}
+
+// Build study queue: new cards only, lesson order, capped
+function buildStudyQueue(){
+  const{cardStates,settings}=state.profileData;
+  const{selectedLessons,newCardCap,productionEnabled}=settings;
+  const dirs=productionEnabled?["rec","pro"]:["rec"];
+  const orderedLessons=[...selectedLessons].sort((a,b)=>parseInt(a.split(" ")[1])-parseInt(b.split(" ")[1]));
+  const queue=[];
+  let remaining=newCardCap;
+  for(const lesson of orderedLessons){
+    if(remaining<=0) break;
+    const newCards=getLessonCards(lesson,dirs,cardStates,c=>c.reps===0);
+    const toAdd=newCards.slice(0,remaining);
+    queue.push(...toAdd);
+    remaining-=toAdd.length;
+  }
+  return queue;
+}
+
+// ── Review screen ─────────────────────────────────────────────────────────────
+function renderReview(root){
+  const{queue,queueIdx,flipped}=state;
+  const card=queue[queueIdx];
+  if(!card){setState({screen:"summary"});return;}
+  const pct=queue.length?(queueIdx/queue.length)*100:0;
+  const previews=previewIntervals(card);
+  const isPoori=state.activeProfile==="Poori";
+  const ratings=[
+    {r:1,label:"Again",key:"1",bg:"var(--again-bg)",border:"var(--again)",text:"var(--again)"},
+    {r:2,label:"Hard", key:"2",bg:"var(--hard-bg)", border:"var(--hard)", text:"var(--hard)"},
+    {r:3,label:"Good", key:"3",bg:"var(--good-bg)", border:"var(--good)", text:"var(--good)"},
+    {r:4,label:"Easy", key:"4",bg:"var(--easy-bg)", border:"var(--easy)", text:"var(--easy)"},
+  ];
+
+  const frontContent = card.dir==="pro"
+    ? `<div style="font-size:28px;font-weight:400;color:var(--text);text-align:center;line-height:1.5;padding:0 8px;">${card.meaning}</div>`
+    : `<div style="font-size:48px;font-family:var(--font-jp);font-weight:300;color:var(--text);letter-spacing:3px;text-align:center;line-height:1.3;">${card.expression}</div>
+       ${card.reading&&card.reading!==card.expression?`<div style="font-size:19px;font-family:var(--font-jp);color:#a8d8a8;letter-spacing:3px;margin-top:8px;">${card.reading}</div>`:""}`;
+
+  const backContent = card.dir==="pro"
+    ? `<div style="font-size:36px;font-family:var(--font-jp);color:#7ec8f4;font-weight:300;letter-spacing:3px;text-align:center;">${card.expression}</div>
+       ${card.reading&&card.reading!==card.expression?`<div style="font-size:19px;color:#a8d8a8;font-family:var(--font-jp);letter-spacing:3px;margin-top:8px;">${card.reading}</div>`:""}` 
+    : `<div style="font-size:20px;font-family:var(--font-jp);color:#7ec8f4;font-weight:300;letter-spacing:2px;">${card.expression}</div>
+       <div style="width:40px;height:1px;background:var(--border2);margin:8px 0;"></div>
+       <div style="font-size:24px;color:var(--text);font-weight:400;text-align:center;line-height:1.5;max-width:380px;">${card.meaning}</div>`;
+
+  root.innerHTML=`
+  <div style="min-height:100vh;background:var(--bg);display:flex;flex-direction:column;font-family:var(--font-ui);">
+    <div style="height:48px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 16px;gap:12px;flex-shrink:0;">
+      <div class="btn" id="backBtn" style="font-size:13px;color:var(--text2);padding:4px 8px;border-radius:5px;">← Back</div>
+      <div style="font-size:11px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;">${state.sessionMode==="review"?"Reviews":"Study"}</div>
+      <div style="flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden;">
+        <div style="height:100%;width:${pct}%;background:var(--accent);border-radius:2px;transition:width .3s;"></div>
+      </div>
+      <div style="font-size:13px;color:var(--text2);min-width:60px;text-align:right;">${queueIdx+1} / ${queue.length}</div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px 12px;">
+      <div style="font-size:11px;color:var(--text3);letter-spacing:2px;margin-bottom:16px;text-transform:uppercase;display:flex;gap:10px;align-items:center;">
+        <span>${card.lesson}</span>
+        <span style="color:${card.dir==="pro"?"var(--gold)":"var(--accent)"};background:${card.dir==="pro"?"rgba(200,151,58,0.12)":"rgba(77,157,224,0.12)"};padding:1px 7px;border-radius:4px;font-size:10px;">${card.dir==="pro"?"Production":"Recognition"}</span>
+      </div>
+      <div class="card-wrap pop" id="cardWrap" style="width:100%;max-width:560px;min-height:260px;cursor:${flipped?"default":"pointer"};">
+        <div class="card-inner${flipped?" flipped":""}" style="min-height:260px;">
+          <div class="card-face" style="background:var(--surface);border:1px solid var(--border2);padding:40px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:260px;box-shadow:0 4px 24px rgba(0,0,0,0.4);gap:8px;">
+            ${frontContent}
+            <div style="margin-top:12px;font-size:11px;color:var(--text3);letter-spacing:1px;">tap · space · enter</div>
+          </div>
+          <div class="card-face card-back-face" style="background:var(--surface);border:1px solid var(--border2);padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:260px;box-shadow:0 4px 24px rgba(0,0,0,0.4);gap:8px;">
+            ${backContent}
+          </div>
+        </div>
+      </div>
+      <div id="ratingBtns" style="display:flex;gap:10px;margin-top:24px;width:100%;max-width:560px;opacity:${flipped?1:0};pointer-events:${flipped?"auto":"none"};transition:opacity .2s;">
+        ${ratings.map((c,i)=>`
+          <div class="rating-btn" data-rating="${c.r}" style="flex:1;padding:12px 8px;background:${c.bg};border:1px solid ${c.border};border-radius:8px;text-align:center;">
+            <div style="font-size:11px;color:${c.text};font-weight:600;margin-bottom:2px;opacity:.85;">${previews[i]}</div>
+            <div style="font-size:15px;font-weight:500;color:${c.text};">${c.label}</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:3px;">[${c.key}]</div>
+          </div>`).join("")}
+      </div>
+      <div style="margin-top:14px;font-size:11px;color:var(--text3);">Again · Hard · Good · Easy — or press 1 2 3 4</div>
+    </div>
+  </div>`;
+
+  document.getElementById("backBtn").addEventListener("click",()=>setState({screen:"home",flipped:false}));
+  document.getElementById("cardWrap").addEventListener("click",()=>{if(!state.flipped)setState({flipped:true});});
+  document.querySelectorAll(".rating-btn").forEach(el=>{
+    el.addEventListener("click",()=>handleRating(parseInt(el.dataset.rating)));
+  });
+}
+
+function handleRating(rating){
+  const{queue,queueIdx,sessionResults}=state;
+  const card=queue[queueIdx];
+  const next=nextFSRS(card,rating);
+  updateCardState(card.key,next);
+  logToday(card.reps===0,rating===1,card.lesson);
+  const results=[...sessionResults,{card,rating}];
+  let newQueue=[...queue];
+  if(rating===1&&queueIdx<newQueue.length-1)
+    newQueue.splice(Math.min(queueIdx+3,newQueue.length),0,{...card,...next});
+  if(queueIdx+1>=newQueue.length){setState({screen:"summary",sessionResults:results,queue:newQueue});}
+  else setState({queue:newQueue,queueIdx:queueIdx+1,flipped:false,sessionResults:results});
+}
+
+// keyboard shortcuts
+document.addEventListener("keydown",e=>{
+  if(state.screen!=="review")return;
+  if(e.key===" "||e.key==="Enter"){e.preventDefault();if(!state.flipped)setState({flipped:true});}
+  if(state.flipped){
+    if(e.key==="1")handleRating(1);if(e.key==="2")handleRating(2);
+    if(e.key==="3")handleRating(3);if(e.key==="4")handleRating(4);
+  }
+});
+
+// ── Summary ───────────────────────────────────────────────────────────────────
+function renderSummary(root){
+  const{sessionResults}=state;
+  const counts=[1,2,3,4].map(r=>sessionResults.filter(x=>x.rating===r).length);
+  const labels=["Again","Hard","Good","Easy"],colors=["var(--again)","var(--hard)","var(--good)","var(--easy)"];
+  root.innerHTML=`
+  <div style="min-height:100vh;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--font-ui);padding:32px;gap:24px;">
+    <div class="fade-up" style="text-align:center;">
+      <div style="font-size:13px;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Session Complete</div>
+      <div style="font-size:36px;font-weight:500;">${sessionResults.length} cards reviewed</div>
+    </div>
+    <div class="fade-up" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+      ${labels.map((l,i)=>`<div style="text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 28px;min-width:90px;"><div style="font-size:28px;font-weight:500;color:${colors[i]};">${counts[i]}</div><div style="font-size:12px;color:var(--text2);margin-top:4px;">${l}</div></div>`).join("")}
+    </div>
+    <div class="fade-up" style="display:flex;gap:10px;">
+      <div class="btn" id="studyAgain" style="padding:10px 22px;border-radius:7px;background:var(--accent);color:#fff;font-size:14px;font-weight:500;">Study New</div>
+      <div class="btn" id="reviewAgain" style="padding:10px 22px;border-radius:7px;background:var(--surface);border:1px solid var(--accent);color:var(--accent);font-size:14px;font-weight:500;">Review Again</div>
+      <div class="btn" id="goHome" style="padding:10px 22px;border-radius:7px;background:var(--surface);border:1px solid var(--border);color:var(--text);font-size:14px;">Home</div>
+    </div>
+  </div>`;
+  document.getElementById("studyAgain").addEventListener("click",()=>{
+    const q=buildStudyQueue();setState({queue:q,queueIdx:0,flipped:false,sessionResults:[],screen:"review",sessionMode:"study"});
+  });
+  document.getElementById("reviewAgain").addEventListener("click",()=>{
+    const q=buildReviewQueue();setState({queue:q,queueIdx:0,flipped:false,sessionResults:[],screen:"review",sessionMode:"review"});
+  });
+  document.getElementById("goHome").addEventListener("click",()=>setState({screen:"home"}));
+}
+
+// ── Main shell ────────────────────────────────────────────────────────────────
+function renderMain(root){
+  const{tab,showDeckBrowser,filterBook,profileData,activeProfile}=state;
+  const{settings,cardStates,dailyLog}=profileData;
+  const isPoori=activeProfile==="Poori";
+  const days=daysUntilExam(settings.examDate);
+  const greeting=getGreeting(activeProfile,days);
+  const today=localDateStr();
+  const tlog=dailyLog[today]||{reviewed:0,newSeen:0,againCount:0};
+  const againRate=tlog.reviewed>0?Math.round(tlog.againCount/tlog.reviewed*100):null;
+  const totalVocab=settings.selectedLessons.reduce((s,l)=>s+(RAW[l]?.length||0),0);
+  const totalStudied=settings.selectedLessons.reduce((s,l)=>s+(RAW[l]||[]).filter((_,i)=>cardStates[cardKey(l,i,"rec")]?.reps>0).length,0);
+  const dueCount=settings.selectedLessons.reduce((s,l)=>{
+    const cards=RAW[l]||[];
+    return s+cards.filter((_,i)=>{
+      const dirs=settings.productionEnabled?["rec","pro"]:["rec"];
+      return dirs.some(d=>{const st=cardStates[cardKey(l,i,d)];return st&&st.reps>0&&st.interval<=1;});
+    }).length;
+  },0);
+  const newLeft=Math.max(0,settings.newCardCap-tlog.newSeen);
+  const displayLessons=filterBook==="1"?BOOK1:filterBook==="2"?BOOK2:LESSONS;
+  const accentColor=isPoori?"var(--gold)":"var(--accent)";
+
+  root.innerHTML=`
+  <div style="min-height:100vh;background:var(--bg);font-family:var(--font-ui);display:flex;flex-direction:column;">
+    <!-- Header -->
+    <div style="height:52px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 16px;gap:12px;flex-shrink:0;">
+      <div style="font-size:17px;font-family:var(--font-jp);font-weight:300;color:var(--text);letter-spacing:1px;">みんなの日本語</div>
+      <div style="width:1px;height:18px;background:var(--border2);"></div>
+      <div style="flex:1;font-size:13px;color:${accentColor};font-weight:500;">${activeProfile==='Poori'?(isDark?'🌕 Poornima':'🌸 Poori'):(isDark?'🔭 Abdul':'😸 Dul')}</div>
+      ${days!==null?`<div style="font-size:12px;color:var(--text3);background:var(--surface2);padding:3px 10px;border-radius:20px;">${days}d left</div>`:""}
+      <div class="btn" id="switchBtn" style="font-size:12px;color:var(--text3);padding:4px 8px;border-radius:5px;border:1px solid var(--border);">Switch</div>
+      <div id="themeBtn"></div>
+    </div>
+    <!-- Nav -->
+    <div style="display:flex;border-bottom:1px solid var(--border);background:var(--surface);flex-shrink:0;">
+      ${["study","progress","settings"].map(id=>`
+        <div class="nav-tab tab-btn" data-tab="${id}" style="padding:10px 18px;font-size:13px;font-weight:${tab===id?500:400};color:${tab===id?"var(--text)":"var(--text2)"};border-bottom:${tab===id?`2px solid ${accentColor}`:"2px solid transparent"};margin-bottom:-1px;">
+          ${id.charAt(0).toUpperCase()+id.slice(1)}
+        </div>`).join("")}
+    </div>
+    <!-- Content -->
+    <div style="flex:1;overflow:auto;" id="tabContent"></div>
+  </div>`;
+
+  document.getElementById("switchBtn").addEventListener("click",()=>setState({activeProfile:null,profileData:null,screen:"home"}));
+  renderThemeBtn("themeBtn");
+  document.querySelectorAll(".tab-btn").forEach(el=>{
+    el.addEventListener("click",()=>setState({tab:el.dataset.tab}));
+  });
+
+  const content=document.getElementById("tabContent");
+
+  // ── Study tab ────────────────────────────────────────────────────────────────
+  if(tab==="study"){
+    content.innerHTML=`
+    <div style="max-width:640px;margin:0 auto;padding:24px 16px;">
+      <div class="fade-up" style="margin-bottom:20px;padding:18px 22px;background:var(--surface);border:1px solid ${accentColor};border-radius:12px;opacity:.92;">
+        <div style="font-size:14px;color:var(--text);line-height:1.7;">${greeting}</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:20px;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-align:center;">
+          <div style="font-size:22px;font-weight:500;color:var(--accent);">${dueCount}</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:4px;">Reviews due</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-align:center;">
+          <div style="font-size:22px;font-weight:500;color:${accentColor};">${tlog.newSeen}/${settings.newCardCap}</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:4px;">New today</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-align:center;">
+          <div style="font-size:22px;font-weight:500;color:${againRate!==null&&againRate>35?"var(--again)":"var(--good)"};">${againRate!==null?againRate+"%":"—"}</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:4px;">Again rate</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
+        <div class="btn" id="reviewBtn" style="padding:16px;border-radius:12px;text-align:center;background:${dueCount>0?'var(--accent)':'var(--surface2)'};color:${dueCount>0?'#fff':'var(--text3)'};font-size:15px;font-weight:600;border:1px solid ${dueCount>0?'transparent':'var(--border2)'};opacity:${dueCount>0?1:0.5};pointer-events:${dueCount>0?'auto':'none'};">
+          <div style="font-size:10px;opacity:.8;margin-bottom:4px;letter-spacing:1px;">REVIEWS</div>
+          ${dueCount>0?`${dueCount} due`:'None due'}
+        </div>
+        <div class="btn" id="startBtn" style="padding:16px;border-radius:12px;text-align:center;background:${newLeft>0?accentColor:'var(--surface2)'};color:${newLeft>0?'#fff':'var(--text3)'};font-size:15px;font-weight:600;border:1px solid ${newLeft>0?'transparent':'var(--border2)'};opacity:${newLeft>0?1:0.5};pointer-events:${newLeft>0?'auto':'none'};">
+          <div style="font-size:10px;opacity:.8;margin-bottom:4px;letter-spacing:1px;">STUDY</div>
+          ${newLeft>0?`${newLeft} new cards`:'Cap reached'}
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <div style="font-size:13px;color:var(--text2);font-weight:500;">Deck Browser</div>
+        <div class="btn" id="deckToggle" style="font-size:12px;padding:4px 12px;border-radius:20px;background:${showDeckBrowser?"var(--accent)":"var(--surface2)"};color:${showDeckBrowser?"#fff":"var(--text2)"};border:1px solid ${showDeckBrowser?"var(--accent)":"var(--border2)"};">${showDeckBrowser?"Hide":"Show"}</div>
+      </div>
+      ${showDeckBrowser?renderDeckBrowserHTML(displayLessons,settings,cardStates,filterBook):""}
+    </div>`;
+
+    document.getElementById("startBtn").addEventListener("click",()=>{
+      const q=buildStudyQueue();setState({queue:q,queueIdx:0,flipped:false,sessionResults:[],screen:"review",sessionMode:"study"});
+    });
+    document.getElementById("reviewBtn")?.addEventListener("click",()=>{
+      const q=buildReviewQueue();setState({queue:q,queueIdx:0,flipped:false,sessionResults:[],screen:"review",sessionMode:"review"});
+    });
+    document.getElementById("deckToggle").addEventListener("click",()=>setState({showDeckBrowser:!showDeckBrowser}));
+    if(showDeckBrowser)attachDeckBrowserEvents(displayLessons,settings);
+  }
+
+  // ── Progress tab ─────────────────────────────────────────────────────────────
+  if(tab==="progress"){
+    const totalDaysStudied=Object.keys(dailyLog).length;
+    const totalReviews=Object.values(dailyLog).reduce((s,d)=>s+d.reviewed,0);
+    const pct=totalVocab?Math.round(totalStudied/totalVocab*100):0;
+    content.innerHTML=`
+    <div style="max-width:640px;margin:0 auto;padding:24px 16px;">
+      <div class="fade-up">
+
+        <!-- Overall stats -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+            <div style="font-size:28px;font-weight:500;color:${accentColor};">${totalStudied}</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:4px;">words seen</div>
+            <div style="margin-top:8px;height:4px;background:var(--border);border-radius:2px;">
+              <div style="height:100%;width:${pct}%;background:${accentColor};border-radius:2px;"></div>
+            </div>
+            <div style="font-size:11px;color:var(--text3);margin-top:4px;">${pct}% of ${totalVocab}</div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+            <div style="font-size:28px;font-weight:500;color:var(--good);">${totalDaysStudied}</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:4px;">days studied</div>
+            <div style="font-size:12px;color:var(--text2);margin-top:8px;">${totalReviews} total reviews</div>
+          </div>
+        </div>
+
+        <!-- Study plan table collapsible -->
+        <div style="margin-bottom:20px;">
+          <div class="btn" id="studyPlanToggle" style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:${state.showStudyPlan?'10px 10px 0 0':'10px'};">
+            <span style="font-size:13px;color:var(--text2);font-weight:500;">Study Plan</span>
+            <span style="font-size:16px;color:var(--text3);display:inline-block;transform:rotate(${state.showStudyPlan?180:0}deg);transition:transform .2s;">▾</span>
+          </div>
+          ${state.showStudyPlan ? `
+          <div style="border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;overflow:hidden;">
+            <div style="padding:8px 14px;font-size:11px;color:var(--text3);background:var(--surface2);border-bottom:1px solid var(--border);">
+              Blue = upcoming · Green = studied · Scroll right to see all days
+            </div>
+            <div style="padding:12px 14px;">
+              ${renderPlanTable(profileData, accentColor)}
+            </div>
+          </div>` : ''}
+        </div>
+
+        <!-- Progress per lesson collapsible -->
+        <div style="margin-bottom:20px;">
+          <div class="btn" id="lessonDetailToggle" style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:${state.showLessonDetail?'10px 10px 0 0':'10px'};">
+            <span style="font-size:13px;color:var(--text2);font-weight:500;">Progress per lesson</span>
+            <span style="font-size:16px;color:var(--text3);display:inline-block;transform:rotate(${state.showLessonDetail?180:0}deg);transition:transform .2s;">▾</span>
+          </div>
+          ${state.showLessonDetail ? `
+          <div style="border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;overflow:hidden;">
+            <div style="padding:8px 14px;background:var(--surface2);border-bottom:1px solid var(--border);">
+              <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:4px;">
+                <span style="font-size:10px;color:var(--text3);"><span style="color:${accentColor};">■</span> Seen — card reviewed at least once</span>
+                <span style="font-size:10px;color:var(--text3);"><span style="color:var(--good);">■</span> Mastered — ≥3 reviews &amp; interval ≥7 days</span>
+              </div>
+              <div style="font-size:10px;color:var(--text3);">🎯 Projected mastery — estimated date all cards in lesson reach mastered status</div>
+            </div>
+            <div style="display:flex;flex-direction:column;">
+              ${(()=>{
+                const planData = buildPlanTable(profileData);
+                return LESSONS.map((l,li)=>{
+                  const cards=RAW[l]||[];
+                  const seen=cards.filter((_,i)=>cardStates[cardKey(l,i,'rec')]?.reps>0).length;
+                  const mastered=cards.filter((_,i)=>{const st=cardStates[cardKey(l,i,'rec')];return st&&st.reps>=3&&st.interval>=7;}).length;
+                  const p=cards.length?Math.round(seen/cards.length*100):0;
+                  const mp=seen?Math.round(mastered/seen*100):0;
+                  const allMastered=mastered>=cards.length&&cards.length>0;
+                  let projHtml='';
+                  if(allMastered){
+                    projHtml='<span style="font-size:11px;color:var(--good);font-weight:500;">Mastered ✓</span>';
+                  } else {
+                    const days=projectMasteryDate(l,profileData,planData);
+                    const fmt=fmtProjection(days);
+                    projHtml='<span style="font-size:11px;color:'+fmt.color+';">'+fmt.rel+' · '+fmt.abs+'</span>';
+                  }
+                  return '<div style="padding:10px 14px;border-bottom:1px solid var(--border2);background:'+(li%2===0?'var(--surface)':'var(--surface2)')+';">'
+                    +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">'
+                    +'<span style="font-size:12px;color:var(--text2);">'+l+'</span>'
+                    +'<div style="display:flex;gap:12px;align-items:center;">'
+                    +'<span style="font-size:11px;color:var(--text3);">'+seen+'/'+cards.length+'</span>'
+                    +projHtml
+                    +'</div></div>'
+                    +'<div style="height:6px;background:var(--border);border-radius:3px;overflow:hidden;">'
+                    +'<div style="height:100%;width:'+p+'%;background:'+accentColor+';border-radius:3px;position:relative;">'
+                    +'<div style="position:absolute;top:0;left:0;height:100%;width:'+mp+'%;background:var(--good);border-radius:3px;"></div>'
+                    +'</div></div>'
+                    +'</div>';
+                }).join('');
+              })()}
+            </div>
+          </div>` : ''}
+        </div>
+
+        <!-- Upcoming reviews chart collapsible -->
+        <div style="margin-bottom:20px;">
+          <div class="btn" id="reviewChartToggle" style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:${state.showReviewChart?'10px 10px 0 0':'10px'};">
+            <span style="font-size:13px;color:var(--text2);font-weight:500;">Upcoming Reviews</span>
+            <span style="font-size:16px;color:var(--text3);display:inline-block;transform:rotate(${state.showReviewChart?180:0}deg);transition:transform .2s;">▾</span>
+          </div>
+          ${state.showReviewChart ? `
+          <div style="border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;padding:16px 14px;">
+            ${renderReviewChart(profileData, accentColor, state.chartMode)}
+          </div>` : ''}
+        </div>
+
+      </div>
+    </div>`;
+    document.getElementById('studyPlanToggle')?.addEventListener('click',()=>setState({showStudyPlan:!state.showStudyPlan}));
+    document.getElementById('lessonDetailToggle')?.addEventListener('click',()=>setState({showLessonDetail:!state.showLessonDetail}));
+    document.getElementById('reviewChartToggle')?.addEventListener('click',()=>setState({showReviewChart:!state.showReviewChart}));
+    document.querySelectorAll('.chart-mode-btn').forEach(el=>{
+      el.addEventListener('click',()=>setState({chartMode:el.dataset.mode}));
+    });
+  }
+
+  if(tab==="settings"){
+    content.innerHTML=`
+    <div style="max-width:540px;margin:0 auto;padding:24px 16px;">
+      <div class="fade-up" style="display:flex;flex-direction:column;gap:14px;">
+
+        <!-- Exam date -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+          <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:10px;">Exam Date</div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <input type="date" id="examDateInput" value="${settings.examDate||""}" style="flex:1;background:var(--surface2);border:1px solid var(--border2);border-radius:6px;padding:8px 10px;color:var(--text);font-size:13px;outline:none;font-family:var(--font-ui);"/>
+            ${settings.examDate?`<span style="font-size:12px;color:var(--text3);">${daysUntilExam(settings.examDate)}d left</span>`:""}
+          </div>
+        </div>
+
+        <!-- Mastery target date -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+          <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px;">Mastery Target Date</div>
+          <div style="font-size:12px;color:var(--text3);margin-bottom:10px;">When set, the daily new card cap adjusts so all cards reach mastery (≥3 reviews &amp; ≥7d interval) by this date. Overrides exam-date cap.</div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <input type="date" id="masteryDateInput" value="${settings.masteryTargetDate||""}" style="flex:1;background:var(--surface2);border:1px solid var(--border2);border-radius:6px;padding:8px 10px;color:var(--text);font-size:13px;outline:none;font-family:var(--font-ui);"/>
+            ${settings.masteryTargetDate?`<span style="font-size:12px;color:var(--text3);">${daysUntilExam(settings.masteryTargetDate)}d left</span>`:""}
+          </div>
+          ${settings.masteryTargetDate?`<div class="btn" id="clearMasteryDate" style="margin-top:8px;font-size:12px;color:var(--again);padding:4px 0;">✕ Clear mastery date</div>`:''}
+        </div>
+
+        <!-- New card cap -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+            <div style="font-size:13px;font-weight:500;color:var(--text);">New cards / session</div>
+            <div style="font-size:12px;color:${settings.capOverride?"var(--gold)":"var(--text3)"};">${settings.capOverride?"Manual":"Auto"}</div>
+          </div>
+          <div style="font-size:12px;color:var(--text3);margin-bottom:12px;">${settings.capOverride?"Override active — drag to change":`Auto-calculated from ${settings.masteryTargetDate ? "mastery target date" : "exam date"} (${settings.newCardCap}/day)`}</div>
+          <div style="display:flex;gap:12px;align-items:center;">
+            <input type="range" id="capSlider" min="5" max="40" step="1" value="${settings.newCardCap}" style="flex:1;"/>
+            <div id="capVal" style="font-size:16px;font-weight:600;color:var(--text);min-width:28px;text-align:right;">${settings.newCardCap}</div>
+          </div>
+          ${settings.capOverride&&settings.examDate?`<div class="btn" id="resetCap" style="margin-top:10px;font-size:12px;color:var(--accent);padding:4px 0;">↩ Reset to auto</div>`:""}
+        </div>
+
+        <!-- Production toggle -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;">
+          <div>
+            <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:3px;">Production cards (EN→JP)</div>
+            <div style="font-size:12px;color:var(--text3);">Harder. Recommended after recognition is solid.</div>
+          </div>
+          <div class="btn toggle-track" id="prodToggle" style="background:${settings.productionEnabled?"var(--good)":"var(--border2)"};">
+            <div class="toggle-thumb" style="left:${settings.productionEnabled?23:3}px;"></div>
+          </div>
+        </div>
+
+        <!-- Export / Import -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+          <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px;">Backup & Restore</div>
+          <div style="font-size:12px;color:var(--text3);margin-bottom:14px;">Export saves all your card progress and settings to a file. Import restores from a backup.</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <div class="btn" id="exportBtn" style="padding:9px 18px;border-radius:7px;background:var(--surface2);border:1px solid var(--border2);color:var(--text);font-size:13px;">⬇ Export Backup</div>
+            <div class="btn" id="importBtn" style="padding:9px 18px;border-radius:7px;background:var(--surface2);border:1px solid var(--border2);color:var(--text);font-size:13px;">⬆ Import Backup</div>
+          </div>
+        </div>
+
+        <!-- Profile -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+          <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:8px;">Profile</div>
+          <div style="font-size:13px;color:var(--text2);">Signed in as <span style="color:${accentColor};font-weight:500;">${activeProfile==='Poori'?(isDark?'Poornima':'Poori'):(isDark?'Abdul':'Dul')}</span></div>
+          <div style="font-size:12px;color:var(--text3);margin-top:4px;">Data syncs to Firebase in real-time.</div>
+          <div class="btn" id="switchBtn2" style="margin-top:12px;font-size:12px;color:var(--again);padding:4px 0;">Switch Profile</div>
+        </div>
+      </div>
+    </div>`;
+
+    document.getElementById("examDateInput").addEventListener("change",e=>updateSettings({examDate:e.target.value,capOverride:false}));
+    document.getElementById("masteryDateInput")?.addEventListener("change",e=>updateSettings({masteryTargetDate:e.target.value||null,capOverride:false}));
+    document.getElementById("clearMasteryDate")?.addEventListener("click",()=>updateSettings({masteryTargetDate:null,capOverride:false}));
+    const capSlider=document.getElementById("capSlider");
+    capSlider.addEventListener("input",e=>{
+      document.getElementById("capVal").textContent=e.target.value;
+    });
+    capSlider.addEventListener("change",e=>updateSettings({newCardCap:+e.target.value,capOverride:true}));
+    document.getElementById("resetCap")?.addEventListener("click",()=>updateSettings({capOverride:false}));
+    document.getElementById("prodToggle").addEventListener("click",()=>updateSettings({productionEnabled:!settings.productionEnabled}));
+    document.getElementById("exportBtn").addEventListener("click",()=>exportData(activeProfile,profileData));
+    document.getElementById("importBtn").addEventListener("click",()=>importData(data=>{
+      updateProfile(data);alert("Backup restored successfully!");
+    }));
+    document.getElementById("switchBtn2").addEventListener("click",()=>setState({activeProfile:null,profileData:null,screen:"home"}));
+  }
+}
+
+// ── Deck browser HTML + events ────────────────────────────────────────────────
+function renderDeckBrowserHTML(displayLessons,settings,cardStates,filterBook){
+  return`
+  <div class="fade-up">
+    <div style="display:flex;gap:2px;margin-bottom:12px;border-bottom:1px solid var(--border);">
+      ${[["all","All"],["1","Book 1"],["2","Book 2"]].map(([v,l])=>`
+        <div class="btn filter-btn" data-filter="${v}" style="padding:7px 14px;font-size:12px;color:${filterBook===v?"var(--accent)":"var(--text2)"};border-bottom:${filterBook===v?"2px solid var(--accent)":"2px solid transparent"};margin-bottom:-1px;">${l}</div>`).join("")}
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;">
+      <div class="btn" id="selAll" style="padding:4px 10px;border-radius:4px;font-size:11px;background:var(--surface2);border:1px solid var(--border);color:var(--text2);">All</div>
+      <div class="btn" id="selNone" style="padding:4px 10px;border-radius:4px;font-size:11px;background:var(--surface2);border:1px solid var(--border);color:var(--text2);">None</div>
+      ${displayLessons.map(l=>{
+        const sel=settings.selectedLessons.includes(l);
+        return`<div class="btn lesson-chip${sel?" sel":""}" data-lesson="${l}" style="padding:4px 12px;border-radius:4px;font-size:12px;background:${sel?"":"var(--surface2)"};border:1px solid ${sel?"":"var(--border)"};color:${sel?"":"var(--text2)"};">${l.replace("Lesson ","")}</div>`;
+      }).join("")}
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+      <div style="display:grid;grid-template-columns:1fr auto auto auto;padding:8px 14px;border-bottom:1px solid var(--border);font-size:10px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;">
+        <span>Lesson</span><span style="text-align:right;min-width:50px;">Cards</span><span style="text-align:right;min-width:50px;">Seen</span><span style="text-align:right;min-width:40px;">✓</span>
+      </div>
+      ${displayLessons.map((l,i)=>{
+        const cards=RAW[l]||[];
+        const sel=settings.selectedLessons.includes(l);
+        const seen=cards.filter((_,idx)=>cardStates[cardKey(l,idx,"rec")]?.reps>0).length;
+        return`<div class="deck-row btn" data-lesson="${l}" style="display:grid;grid-template-columns:1fr auto auto auto;padding:11px 14px;border-bottom:${i<displayLessons.length-1?"1px solid var(--border)":"none"};background:${sel?"rgba(77,157,224,0.05)":"transparent"};">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="width:16px;height:16px;border-radius:3px;border:1px solid ${sel?"var(--accent)":"var(--border2)"};background:${sel?"var(--accent)":"transparent"};display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              ${sel?`<span style="color:#fff;font-size:10px;font-weight:700;">✓</span>`:""}
+            </div>
+            <span style="font-size:13px;color:${sel?"var(--text)":"var(--text2)"};">${l}</span>
+          </div>
+          <span style="font-size:12px;color:var(--text2);text-align:right;min-width:50px;align-self:center;">${cards.length}</span>
+          <span style="font-size:12px;text-align:right;min-width:50px;align-self:center;color:${seen>0?"var(--good)":"var(--text3)"};">${seen||"—"}</span>
+          <span style="font-size:12px;text-align:right;min-width:40px;align-self:center;color:${sel?"var(--accent)":"var(--text3)"};">${sel?"✓":"—"}</span>
+        </div>`;
+      }).join("")}
+    </div>
+  </div>`;
+}
+
+function attachDeckBrowserEvents(displayLessons,settings){
+  document.querySelectorAll(".filter-btn").forEach(el=>{
+    el.addEventListener("click",()=>setState({filterBook:el.dataset.filter}));
+  });
+  document.getElementById("selAll")?.addEventListener("click",()=>{
+    const next=[...new Set([...settings.selectedLessons,...displayLessons])];
+    updateSettings({selectedLessons:next});
+  });
+  document.getElementById("selNone")?.addEventListener("click",()=>{
+    const next=settings.selectedLessons.filter(l=>!displayLessons.includes(l));
+    if(next.length>0)updateSettings({selectedLessons:next});
+  });
+  document.querySelectorAll(".lesson-chip[data-lesson],.deck-row[data-lesson]").forEach(el=>{
+    el.addEventListener("click",e=>{
+      e.stopPropagation();
+      const l=el.dataset.lesson;
+      const sel=settings.selectedLessons.includes(l);
+      const next=sel?settings.selectedLessons.filter(x=>x!==l):[...settings.selectedLessons,l];
+      if(next.length>0)updateSettings({selectedLessons:next});
+    });
+  });
+}
+
+// ── Theme button helper ───────────────────────────────────────────────────────
+function renderThemeBtn(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.innerHTML = `
+    <div class="theme-toggle" id="themeToggle_${containerId}">
+      <span style="font-size:13px;">${isDark ? "🌙" : "☀️"}</span>
+      <div class="theme-toggle-track" style="background:${isDark ? "#4d9de0" : "#ccc"};">
+        <div class="theme-toggle-thumb" style="left:${isDark ? 19 : 3}px;"></div>
+      </div>
+    </div>`;
+  document.getElementById(`themeToggle_${containerId}`).addEventListener('click', () => {
+    isDark = !isDark;
+    applyTheme();
+    render();
+  });
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+onFbReady(()=>render());
+// Hook for chart mode toggle buttons (inline onclick can't call setState directly)
+window._reRenderProgress = () => { state.tab='progress'; render(); };
+</script>
+</body>
+</html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
